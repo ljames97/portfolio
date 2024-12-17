@@ -1,9 +1,12 @@
+import HomePage from "./components/home-page/HomePage"
+import Header from "./components/layout/Header"
 
 const App = () => {
   return (
-    <div>
-      <div className='h-screen bg-green-500'>Tailwind Practice</div>
-    </div>
+    <>
+      <Header />
+      <HomePage />
+    </>
   )
 }
 

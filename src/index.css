@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply box-border;
+  }
+
+  *, *::before, *::after {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 bg-custom-purple text-white font-ubuntu;
+  }
+
+  h1, h2, h3, p {
+    @apply m-0; 
+  }
+
+  img {
+    @apply block w-full h-auto object-cover
+  }
+}
