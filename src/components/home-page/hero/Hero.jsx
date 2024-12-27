@@ -2,13 +2,15 @@
 
 import HeroGraphic from "./HeroGraphic";
 import HeroHeader from "./HeroHeader"
+import Socials from "./Socials";
 
 const Hero = () => {
   return (
     <div className="flex flex-col items-center -mt-10">
-      <HeroGraphic />
-      <HeroHeader />
 
+      <HeroHeader />
+      <HeroGraphic />
+      <Socials />
     </div>
   )
 }

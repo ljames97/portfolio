@@ -1,14 +1,15 @@
 TODO
 
 /home-page
-- social icons
-- about section w link
-- projects
-- skills
-- contact
+- sign off/extra about
+- contact (let's work together)
+- footer
+- background texture/shapes
 
 /mobile-menu
 /projects
 /about-page
 /contact-page
 /journal
+/light-dark-mode
+/desktop

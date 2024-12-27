@@ -14,7 +14,7 @@
   }
 
   body {
-    @apply m-0 bg-custom-purple text-white font-ubuntu;
+    @apply m-0 bg-custom-purple text-white font-ubuntu tracking-wide;
   }
 
   h1, h2, h3, p {
@@ -24,4 +24,10 @@
   img {
     @apply block w-full h-auto object-cover
   }
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
