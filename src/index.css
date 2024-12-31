@@ -24,6 +24,14 @@
   img {
     @apply block w-full h-auto object-cover
   }
+
+  input {
+    @apply bg-transparent border-b pb-2 mb-4 w-3/4 text-white
+  }
+
+  label {
+    @apply text-xs opacity-60 font-thin tracking-widest
+  }
 }
 
 .icon-grid {

@@ -1,10 +1,7 @@
 TODO
 
 /home-page
-- sign off/extra about
-- contact (let's work together)
-- footer
-- background texture/shapes
+- logo
 
 /mobile-menu
 /projects
@@ -12,4 +9,6 @@ TODO
 /contact-page
 /journal
 /light-dark-mode
+- sort out the color design
+/home-page-buttons
 /desktop
