@@ -1,4 +1,11 @@
 TODO
 
-- push to github
-- start basic layout of home page
+/projects
+/about-page
+/contact-page
+/journal
+/light-dark-mode
+- sort out the color design
+/home-page-buttons
+/desktop
+
