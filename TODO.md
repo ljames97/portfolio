@@ -1,9 +1,5 @@
 TODO
 
-/home-page
-- logo
-
-/mobile-menu
 /projects
 /about-page
 /contact-page
@@ -12,3 +8,4 @@ TODO
 - sort out the color design
 /home-page-buttons
 /desktop
+
