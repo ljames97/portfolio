@@ -1,6 +1,9 @@
 TODO
 
 /projects
+- myChai blog post
+- plantBud blog post
+
 /about-page
 /contact-page
 /journal
@@ -8,4 +11,3 @@ TODO
 - sort out the color design
 /home-page-buttons
 /desktop
-

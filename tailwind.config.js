@@ -13,7 +13,8 @@ export default {
         'orange-accent': '#FFA000',
         'electric-blue': '#00D8FF',
         'translucent-black': 'rgba(0, 0, 0, 0.4)',
-        'translucent-white': 'rgba(255, 255, 255, 0.4)'
+        'translucent-white': 'rgba(255, 255, 255, 0.4)',
+        'translucent-green': 'rgb(124, 252, 0, 0.5)',
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
