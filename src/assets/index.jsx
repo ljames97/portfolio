@@ -10,3 +10,4 @@ export { default as myChaiCoverMobile_2 } from './my-chai-2.png';
 export { default as plantBudCoverMobile_2 } from './plant-bud-2.png';
 export { default as plantBudCoverMobile_3 } from './plant-bud-3.png';
 export { default as myChaiCoverMobile_3 } from './my-chai-3.png';
+export { default as cv } from './my-cv.pdf';
