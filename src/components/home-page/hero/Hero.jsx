@@ -6,7 +6,7 @@ import Socials from "./Socials";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center -mt-10">
+    <div className="flex flex-col items-center -mt-8">
 
       <HeroHeader />
       <HeroGraphic />

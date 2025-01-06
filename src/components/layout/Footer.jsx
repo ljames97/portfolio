@@ -1,6 +1,18 @@
 // Footer.jsx
 
+import { useNavigate } from "react-router-dom";
+import { cv } from "../../assets";
+
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/projects')
+  }
+
+  const handleCvClick = () => {
+    window.open(cv, '_blank', 'noopener,noreferrer');
+  }
+
   return (
     <>
       <footer className="bg-orange-accent text-lighter-purple p-8">
@@ -10,8 +22,8 @@ const Footer = () => {
         </div>
         <div className="border-b pb-8 border-black">
           <ul>
-            <li>My Projects</li>
-            <li>My CV</li>
+            <li onClick={handleClick}>My Projects</li>
+            <li onClick={handleCvClick}>My CV</li>
           </ul>
         </div>
         <p className="mt-8 text-sm text-black">© Luke James 2025</p>

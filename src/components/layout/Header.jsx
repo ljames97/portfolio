@@ -4,10 +4,9 @@ import MainLogo from "./MainLogo";
 
 const Header = ({ toggleMobileMenu }) => {
   const fill = 'white'
-
   return (
     <>
-      <header className="p-6 flex justify-between">
+      <header className="p-8 flex justify-between">
         <MainLogo />
         <div onClick={toggleMobileMenu}>
           <svg className="p-2 rounded-full w-10 h-10 text-center" width="40" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
