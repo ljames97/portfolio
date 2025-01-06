@@ -1,11 +1,11 @@
 TODO
 
-/projects
-/about-page
-/contact-page
-/journal
-/light-dark-mode
+/final-design
 - sort out the color design
-/home-page-buttons
-/desktop
+- perfect the design 
+- light/dark mode
 
+/desktop-css
+/production
+
+add project im working on right now as a coming soon option
