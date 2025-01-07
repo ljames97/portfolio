@@ -11,7 +11,7 @@ const MainLogo = ({ toggleMobileMenu }) => {
     navigate('/');
   }
   return (
-    <div onClick={handleLogoClick} className="bg-white/10 p-2 rounded-full w-10 h-10 text-center">LJ</div>
+    <div onClick={handleLogoClick} className="rounded bg-light-orange p-2 w-12 h-12 text-center text-center font-bold text-2xl text-dark-blue">L</div>
   )
 }
 

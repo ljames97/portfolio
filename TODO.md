@@ -17,3 +17,6 @@ TODO
 /production
 
 add project im working on right now as a coming soon option
+
+changes:
+removed HeroGraphic

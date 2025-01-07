@@ -27,7 +27,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
   }, []);
 
   return ReactDOM.createPortal (
-    <div className="fixed inset-0 flex flex-col bg-custom-purple w-full z-40 overflow-y-auto">
+    <div className="fixed inset-0 flex flex-col bg-dark-blue w-full z-40 overflow-y-auto">
       <div className="flex justify-between p-8">
         <MainLogo toggleMobileMenu={toggleMobileMenu} />
         <button className="pr-4 text-xl font-thin opacity-80" onClick={toggleMobileMenu}>X</button>
