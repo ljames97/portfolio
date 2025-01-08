@@ -8,8 +8,8 @@ const AboutSection = () => {
     navigate('/about')
   }
   return (
-    <div className="bg-dark-blue p-8 pt-4 mt-8 leading-relaxed text-white">
-      <div className="border-deep-orange border-2 p-8 rounded-3xl">
+    <div className="bg-dark-teal p-8 py-16 mt-6 leading-relaxed text-white">
+      <div className="border-deep-orange border-2 p-8 rounded-3xl bg-dark-blue">
         <h1 className="tracking-widest text-lg py-4">ABOUT</h1>
         <p className="mt-2 font-thin">I specialize in crafting modern, responsive websites with a focus on clean design and seamless user experiences.
           With experience in technologies like React, Tailwind CSS, and JavaScript, I bring ideas to life on the web.

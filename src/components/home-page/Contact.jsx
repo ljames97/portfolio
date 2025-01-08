@@ -30,9 +30,9 @@ const Contact = () => {
   }
 
   return (
-    <div className="p-8 leading-relaxed">
-      <h1 className="text-lg font-semibold pb-2">Let's work together!</h1>
-      <p className="mt-2 font-thin opacity-80">I’m currently open to exciting opportunities. Let’s create something great together.</p>
+    <div className="p-8 py-16 my-4 leading-relaxed">
+      <h1 className="text-lg pb-2">Let's work together!</h1>
+      <p className="mt-2 font-thin">I’m currently open to exciting opportunities. Let’s create something great together.</p>
       <form className="flex flex-col gap-4 mt-8" onSubmit={handleSubmit}>
         <label htmlFor="name">Your Name</label>
         <input 
@@ -60,7 +60,7 @@ const Contact = () => {
         onChange={handleChange}
         aria-required="true"
         />
-        <button className="self-start bg-lighter-purple p-4 rounded">Let's Chat</button>
+        <button className="self-start bg-light-orange p-4 text-black rounded-3xl">Let's Chat</button>
       </form>
     </div>
   )

@@ -14,6 +14,7 @@ const projects = [
     skills: 'React, SCSS, FireBase',
     exploreLink: '/my-chai',
     url: 'https://ljames97.github.io/my-chai',
+    backgroundColor: 'bg-light-green'
   },
   {
     title: 'PlantBud',
@@ -24,7 +25,8 @@ const projects = [
     coverPhoto: [plantBudCover],
     skills: 'Javascript, CSS, Firebase',
     exploreLink: '/plant-bud',
-    url: 'https://ljames97.github.io/plant-bud'
+    url: 'https://ljames97.github.io/plant-bud',
+    backgroundColor: 'bg-light-green'
   }
 ]
 

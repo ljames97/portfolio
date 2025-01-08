@@ -28,7 +28,11 @@ export default {
         'lavender': '#9f87ff',
         'light-aqua': '#78ead4',
         'deep-orange': '#c56a19',
-        'light-orange': '#FFB347'
+        'light-orange': '#FFB347',
+        'dark-teal': '#051c26',
+        'dark-brown': '#33302f',
+        'light-green': '#343932',
+        'footer': '#453d38'
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
