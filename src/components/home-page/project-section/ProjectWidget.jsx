@@ -18,7 +18,7 @@ const ProjectWidget = ({ project }) => {
         <div className="w-1/1">
          <p className="mt-2 font-thin opacity-80">{project.description_1}</p>
          <p className="opacity-90 mt-4">{project.skills}</p>
-          <button onClick={handleClick} className="mt-8 p-4 w-1/3 bg-light-orange text-black rounded-3xl">Discover</button>
+          <button onClick={handleClick} className="mt-8 p-4 bg-light-orange text-black rounded-3xl">Discover →</button>
         </div>
       </div>
     </div>

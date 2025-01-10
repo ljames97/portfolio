@@ -14,7 +14,7 @@ const AboutSection = () => {
         <p className="mt-2 font-thin">I specialize in crafting modern, responsive websites with a focus on clean design and seamless user experiences.
           With experience in technologies like React, Tailwind CSS, and JavaScript, I bring ideas to life on the web.
         </p>
-        <button onClick={handleClick} className="text-black mt-10 mb-4 p-4 mt-8 w-1/1 bg-light-orange rounded-3xl">About me</button>
+        <button onClick={handleClick} className="text-black mt-10 mb-4 p-4 mt-8 w-1/1 bg-light-orange rounded-3xl">About me →</button>
       </div>
 
     </div>

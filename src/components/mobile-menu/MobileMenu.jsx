@@ -27,12 +27,14 @@ const MobileMenu = ({ toggleMobileMenu }) => {
   }, []);
 
   return ReactDOM.createPortal (
-    <div className="fixed inset-0 flex flex-col bg-dark-blue w-full z-40 overflow-y-auto">
-      <div className="flex justify-between p-12">
-        <MainLogo toggleMobileMenu={toggleMobileMenu} />
-        <button className="pr-4 text-xl font-thin opacity-80" onClick={toggleMobileMenu}>X</button>
+    <div className="fixed inset-0 flex flex-col bg-dark-teal w-full z-40 overflow-y-auto">
+      <div className="flex p-12 justify-end">
+        <div>
+          <img />
+        </div>
+        <button className="pr-4 text-2xl font-thin opacity-80" onClick={toggleMobileMenu}>X</button>
       </div>
-      <ul className="p-16 mb-16 text-xl tracking-widest opacity-80">
+      <ul className="p-12 mb-16 text-xl tracking-widest opacity-80">
         <li className="mt-8" onClick={toggleMobileMenu}>
           <Link to="/">Home</Link>
         </li>
@@ -71,7 +73,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
         </li>
       </ul>
       <Socials />
-      <p className="px-16 tracking-widest opacity-80">lukedesmondjames@gmail.com</p>
+      <p className="px-12 tracking-widest opacity-80">lukedesmondjames@gmail.com</p>
 
 
     </div>,

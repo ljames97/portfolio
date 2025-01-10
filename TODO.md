@@ -1,8 +1,6 @@
 TODO
 
 /final-design
-- perfect the design 
-
 - light/dark mode
 - sort out email form
 - links to gh, insta, linkedIN
@@ -12,6 +10,6 @@ TODO
 
 /desktop-css
 - responsive design
+- final touches
 /production
 
-add project im working on right now as a coming soon option, also portfolio as its own project

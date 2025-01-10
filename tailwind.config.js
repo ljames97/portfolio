@@ -22,16 +22,16 @@ export default {
         'dark-blue': '#010f1a',
         'medium-blue': '#083e58',
         'light-blue': '#1199a9',
-        'aqua-blue': '#62d2bc',
+        'aqua-blue': '#00D8FF',
         'slate-blue': '#7c9cf5',
         'soft-pink': '#f8a1d1',
         'lavender': '#9f87ff',
         'light-aqua': '#78ead4',
         'deep-orange': '#c56a19',
         'light-orange': '#FFB347',
+        'lighter-orange': '#FFB347',
         'dark-teal': '#051c26',
-        'dark-brown': '#33302f',
-        'light-green': '#343932',
+        'dark-brown': '#251e21',
         'footer': '#453d38'
       },
       fontFamily: {
@@ -44,3 +44,4 @@ export default {
   plugins: [],
 }
 
+// 352e28 dark-brown

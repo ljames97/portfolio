@@ -2,7 +2,6 @@
 
 import { useNavigate } from "react-router-dom";
 import { cv } from "../../assets";
-import Socials from "../home-page/hero/Socials";
 import MiniSocials from "./MiniSocials";
 
 const Footer = () => {
@@ -22,7 +21,7 @@ const Footer = () => {
           <h2 className="mt-8">CONTACT</h2>
           <p className="mt-2">lukedesmondjames@gmail.com</p>
         </div>
-        <div className="border-b pb-8 border-black">
+        <div className="border-b pb-8 border-aqua-blue">
           <ul>
             <li onClick={handleClick}>My Projects</li>
             <li onClick={handleCvClick}>My CV</li>
