@@ -3,10 +3,10 @@
 import HeroGraphic from "./HeroGraphic";
 import HeroHeader from "./HeroHeader"
 import Socials from "./Socials";
-
+ 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center -mt-10">
+    <div className="flex flex-col">
 
       <HeroHeader />
       <HeroGraphic />
@@ -15,4 +15,4 @@ const Hero = () => {
   )
 }
 
-export default Hero;
+export default Hero

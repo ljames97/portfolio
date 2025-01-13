@@ -1,8 +1,17 @@
 // MainLogo.jsx
 
-const MainLogo = () => {
+import { useNavigate } from "react-router-dom";
+
+const MainLogo = ({ toggleMobileMenu }) => {
+  const navigate = useNavigate();
+  const handleLogoClick = () => {
+    if (toggleMobileMenu) {
+      toggleMobileMenu();
+    }
+    navigate('/');
+  }
   return (
-    <div className="bg-white/10 p-2 rounded-full w-10 h-10 text-center">LJ</div>
+    <div onClick={handleLogoClick} className=" rounded-full flex items-center justify-center bg-dark-teal dark:bg-lighter-orange p-2 w-14 h-14 text-center font-bold text-2xl text-white dark:text-dark-blue">L</div>
   )
 }
 

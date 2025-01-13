@@ -1,11 +1,12 @@
 TODO
 
-/final-design
-- sort out the color design
-- perfect the design 
-- light/dark mode
-
 /desktop-css
+- responsive design
+
+/final-touches
+- animations, small detailing
+- final touches
+- email form
+- main logo
 /production
 
-add project im working on right now as a coming soon option

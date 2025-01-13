@@ -1,20 +1,37 @@
 // Footer.jsx
 
+import { useNavigate } from "react-router-dom";
+import { cv } from "../../assets";
+import MiniSocials from "./MiniSocials";
+import SocialIcons from "../global/SocialIcons";
+
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/projects')
+  }
+
+  const handleCvClick = () => {
+    window.open(cv, '_blank', 'noopener,noreferrer');
+  }
+
   return (
     <>
-      <footer className="bg-orange-accent text-lighter-purple p-8">
+      <footer className="dark:bg-dark-teal bg-dark-teal text-white p-8">
         <div className="mb-8">
-          <h2 className="text-black opacity-80 mt-8">SAY HELLO</h2>
+          <h2 className="mt-8">CONTACT</h2>
           <p className="mt-2">lukedesmondjames@gmail.com</p>
         </div>
-        <div className="border-b pb-8 border-black">
+        <div className="border-b pb-8 dark:border-aqua-blue border-white">
           <ul>
-            <li>My Projects</li>
-            <li>My CV</li>
+            <li onClick={handleClick}>My Projects</li>
+            <li onClick={handleCvClick}>My CV</li>
           </ul>
+          <div className="flex mt-16 gap-8">
+            <SocialIcons widthHeight={'25'}/>
+          </div>
         </div>
-        <p className="mt-8 text-sm text-black">© Luke James 2025</p>
+        <p className="mt-8 text-sm">© Luke James 2025</p>
       </footer>
     </>
   )
