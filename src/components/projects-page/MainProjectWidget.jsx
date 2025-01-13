@@ -14,7 +14,7 @@ const MainProjectWidget = ({ project, CTA }) => {
   }
 
   return (
-    <div className="mb-12 bg-dark-brown border-deep-orange border-2 p-4 py-10 border-black rounded-3xl">
+    <div className="mb-12 border-light-orange bg-dark-teal text-white dark:text-white dark:bg-dark-brown dark:border-deep-orange border-2 p-4 py-10 border-black rounded-3xl">
       <h3 className="text-xl tracking-widest">{project.title}</h3>
       <p className="italic text-sm mt-2">{project.skills}</p>
       <div className="mt-6">
@@ -31,7 +31,7 @@ const MainProjectWidget = ({ project, CTA }) => {
       </div>
       )}
       {!CTA && (
-        <button className="mt-8 p-4 rounded-3xl bg-dark-teal text-white text-sm italic mr-2">Coming soon...</button>
+        <button className="mt-8 p-4 rounded-3xl bg-beige dark:bg-dark-teal text-black dark:text-white text-sm italic mr-2">Coming soon...</button>
 
       )}
       <div>

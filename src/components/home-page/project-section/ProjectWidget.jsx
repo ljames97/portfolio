@@ -9,7 +9,7 @@ const ProjectWidget = ({ project }) => {
   }
 
   return (
-    <div className={`pb-16 mb-16 border-deep-orange border-2 px-8 pt-10 rounded-3xl ${project.backgroundColor}`}>
+    <div className={`pb-16 mb-16 border-white dark:border-light-orange dark:border-deep-orange border-2 px-8 pt-10 rounded-3xl bg-dark-teal dark:bg-dark-brown `}>
       <div className="flex flex-col gap-4">
       <h3 className="tracking-widest text-2xl mt-4 font-thin">{project.title}</h3>
         <div className="w-1/1">

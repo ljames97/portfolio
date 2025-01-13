@@ -15,7 +15,7 @@
   }
 
   body {
-    @apply m-0 bg-dark-blue text-white font-sourceSans tracking-wide;
+    @apply m-0 bg-off-white text-dark-blue font-sourceSans tracking-wide dark:bg-dark-blue dark:text-white;
   }
 
   h1, h2, h3, p {
@@ -27,11 +27,11 @@
   }
 
   input {
-    @apply bg-transparent border-b pb-2 mb-4 w-3/4 text-white
+    @apply bg-transparent border-black dark:border-white border-b pb-2 mb-4 w-3/4 dark:text-white text-black
   }
 
   label {
-    @apply text-xs opacity-60 font-thin tracking-widest
+    @apply text-xs font-thin tracking-widest
   }
 }
 

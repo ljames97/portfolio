@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const Contact = () => {
   const [ isSubmit, setisSubmit ] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [ formData, setFormData ] = useState({
     name: '',
     email: '',
@@ -16,11 +17,25 @@ const Contact = () => {
       ...prevData,
       [id]: value,
     }));
+    setisSubmit(false);
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const hasError = Object.values(formData).some((value) => {
+      if (typeof value === 'object' && value !== null) {
+        return Object.values(value).some((nestedValue) => nestedValue === '');
+      }
+      return value === '';
+    });
+
+    if (hasError) {
+      setIsError(true);
+      return;
+    }
+
     setisSubmit(true);
+    setIsError(false);
     console.log(formData);
     setFormData({
       name: '',
@@ -33,6 +48,10 @@ const Contact = () => {
     <div className="p-8 py-16 my-4 leading-relaxed">
       <h1 className="text-lg pb-2">Let's work together!</h1>
       <p className="mt-2 font-thin">I’m currently open to exciting opportunities. Let’s create something great together.</p>
+      {isSubmit && (
+        <p className="my-8 text-deep-orange">Thank you for contacting me, I'll be in touch soon!</p>
+      )}
+      {isError ? <p aria-live="assertive" role="alert" className="mt-8 font-thin text-red-300">Please fill out all fields</p> : ''}
       <form className="flex flex-col gap-4 mt-8" onSubmit={handleSubmit}>
         <label htmlFor="name">Your Name</label>
         <input 

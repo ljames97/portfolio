@@ -6,14 +6,17 @@ import MobileMenu from "./components/mobile-menu/MobileMenu"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutPage from "./components/about-page/AboutPage"
 import ProjectsPage from "./components/projects-page/ProjectsPage"
+import ScrollToTop from "./components/global/ScrollToTop"
 
 const App = () => {
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuVisible(!isMobileMenuVisible);
   }
+
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         {isMobileMenuVisible && <MobileMenu toggleMobileMenu={toggleMobileMenu}/>}
         <Header toggleMobileMenu={toggleMobileMenu} />

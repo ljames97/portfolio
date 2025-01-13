@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}"
@@ -32,7 +33,13 @@ export default {
         'lighter-orange': '#FFB347',
         'dark-teal': '#051c26',
         'dark-brown': '#251e21',
-        'footer': '#453d38'
+        'light-brown': '#3d2c34',
+        'footer': '#453d38',
+        'off-white': '#ede5dd',
+        'light-beige': '#f3ede7',
+        'deep-red': '#300719',
+        'medium-red': '#353033',
+        'beige': '#ccbfb0'
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],

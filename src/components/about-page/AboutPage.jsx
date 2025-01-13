@@ -10,7 +10,7 @@ const AboutPage = () => {
   }
 
   return (
-    <div className="p-10">
+    <div className=" bg-off-white dark:bg-dark-blue p-10 pb-16">
       <h1 className="text-xl tracking-widest">ABOUT ME</h1>
       <div className="w-1/2 my-12">
           <img className="rounded-full" src={headshot} />

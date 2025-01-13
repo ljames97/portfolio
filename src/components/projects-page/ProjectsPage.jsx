@@ -5,7 +5,7 @@ import MainProjectWidget from "./MainProjectWidget";
 
 const ProjectsPage = () => {
   return (
-    <div className="p-10 pb-16">
+    <div className=" dark:bg-dark-blue p-10 pb-16">
       <h1 className="text-xl tracking-widest">PROJECTS</h1>
       <div className="mt-8">
         {projects.map((project, index) => (
