@@ -2,7 +2,6 @@
 
 import { useNavigate } from "react-router-dom";
 import { cv } from "../../assets";
-import MiniSocials from "./MiniSocials";
 import SocialIcons from "../global/SocialIcons";
 
 const Footer = () => {
@@ -17,12 +16,12 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="dark:bg-dark-teal bg-dark-teal text-white p-8">
+      <footer className="dark:bg-orange-blue bg-dark-orange text-white p-8">
         <div className="mb-8">
           <h2 className="mt-8">CONTACT</h2>
           <p className="mt-2">lukedesmondjames@gmail.com</p>
         </div>
-        <div className="border-b pb-8 dark:border-aqua-blue border-white">
+        <div className="md:w-1/4 border-b pb-8 dark:border-light-orange border-white">
           <ul>
             <li onClick={handleClick}>My Projects</li>
             <li onClick={handleCvClick}>My CV</li>

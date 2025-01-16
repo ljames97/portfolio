@@ -45,14 +45,14 @@ const Contact = () => {
   }
 
   return (
-    <div className="p-8 py-16 my-4 leading-relaxed">
+    <div className="md:h-screen md:w-1/1 p-8 py-16 md:py-20 my-4 md:my-0 md:px-16 leading-relaxed bg-dark-teal">
       <h1 className="text-lg pb-2">Let's work together!</h1>
       <p className="mt-2 font-thin">I’m currently open to exciting opportunities. Let’s create something great together.</p>
       {isSubmit && (
         <p className="my-8 text-deep-orange">Thank you for contacting me, I'll be in touch soon!</p>
       )}
       {isError ? <p aria-live="assertive" role="alert" className="mt-8 font-thin text-red-300">Please fill out all fields</p> : ''}
-      <form className="flex flex-col gap-4 mt-8" onSubmit={handleSubmit}>
+      <form className="w-1/2 flex flex-col gap-4 mt-8" onSubmit={handleSubmit}>
         <label htmlFor="name">Your Name</label>
         <input 
         type="text"

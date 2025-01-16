@@ -4,7 +4,7 @@ import SocialIcons from "../../global/SocialIcons";
 
 const Socials = () => {
   return (
-    <div className="flex w-screen p-8 pl-12 gap-10">
+    <div className="md:w-screen flex w-screen p-8 pl-12 gap-10">
       <SocialIcons widthHeight={'30'} />
     </div>
   )

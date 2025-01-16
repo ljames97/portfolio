@@ -22,7 +22,7 @@ export default {
 
         'dark-blue': '#010f1a',
         'medium-blue': '#083e58',
-        'light-blue': '#1199a9',
+        'light-blue': '#bccfd4',
         'aqua-blue': '#00D8FF',
         'slate-blue': '#7c9cf5',
         'soft-pink': '#f8a1d1',
@@ -32,6 +32,7 @@ export default {
         'light-orange': '#FFB347',
         'lighter-orange': '#FFB347',
         'dark-teal': '#051c26',
+        'light-teal': '#174559',
         'dark-brown': '#251e21',
         'light-brown': '#3d2c34',
         'footer': '#453d38',
@@ -46,6 +47,9 @@ export default {
         ubuntu: ['Ubuntu', 'sans-serif'],
         sourceSans: ['Source Sans 3', 'sans-serif']
       },
+      boxShadow: {
+        'even-glow': '0 0 20px 5px #c56a19'
+      }
     },
   },
   plugins: [],

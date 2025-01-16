@@ -5,10 +5,10 @@ import ProjectWidget from "./ProjectWidget";
 
 const ProjectSection = () => {
   return (
-    <div className="p-8 py-16 leading-relaxed text-white">
-      <div className="">
-        <h1 className="tracking-widest text-2xl py-4 mb-8 text-black dark:text-white">Recent Projects</h1>
-        <div className="">
+    <div className="md:bg-[url('./assets/edge-squares-small.png')] md:bg-cover md:bg-right-bottom md:h-screen md:px-16 md:pt-14 p-8 pb-16 leading-relaxed text-white md:flex bg-dark-teal">
+      <div className="md:flex md:flex-col items-center">
+        <h1 className="self-center font-thin tracking-widest text-3xl py-4 mb-8 text-black dark:text-white">Recent Projects</h1>
+        <div className="md:flex gap-16 ">
           {projects.map((project, index) => (
             <ProjectWidget key={index} project={project}/>
           ))}

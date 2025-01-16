@@ -4,13 +4,13 @@ import { useTheme } from "../../store/ThemeContext";
 
 const SkillsGrid = () => {
   const { isDarkMode } = useTheme();
-  const backgroundFill = isDarkMode ? '#010f1a' : '#e6ddd3'
-  const mainFill = isDarkMode ? '#FFB347' : '#051c26'
+  const backgroundFill = isDarkMode ? '#a74d28' : '#e6ddd3'
+  const mainFill = isDarkMode ? '#ede5dd' : '#051c26'
   return (
-    <div className="p-8 py-16 leading-relaxed bg-dark-teal text-white dark:bg-dark-teal">
-      <h1 className="tracking-widest text-2xl py-4 mb-8">Skills</h1>
-      <div className="flex justify-center my-12">
-        <div className="grid grid-cols-3 gap-4 gap-y-8">
+    <div className="font-thin md:h-screen p-8 py-16 leading-relaxed bg-dark-teal text-white dark:bg-dark-blue">
+      <h1 className="text-center font-thin tracking-widest text-3xl py-4 mb-8 md:mb-0 md:pb-0">Skills</h1>
+      <div className="b flex justify-center my-12 md:my-0">
+        <div className="border md:w-2/3 md:py-16 md:px-0 rounded-3xl border-light-orange md:border-none bg-dark-blue p-8 grid grid-cols-3 gap-4 gap-y-8 md:gap-y-16">
           <div className="flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 256 256">
               <rect width="256" height="256" fill={backgroundFill} rx="60"/>
@@ -18,7 +18,7 @@ const SkillsGrid = () => {
               <path fill={mainFill} d="M128 38H48L56.6098 134.593H128V102.655H85.8241L82.901 69.9448H128V38Z"/>
               <path fill={mainFill} d="M128 185.647L127.959 185.661L92.38 176.037L90.0012 149.435H57.9388L62.5236 200.716L127.951 218.888L128 218.874V185.647Z"/>
             </svg>
-            <span className="mt-2 text-sm">HTML</span>
+            <span className="mt-2 text-sm font-thin">HTML</span>
           </div>
           <div className="flex flex-col items-center">
             <svg width="100" height="100" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">

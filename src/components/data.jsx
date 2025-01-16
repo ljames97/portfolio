@@ -27,6 +27,13 @@ const projects = [
     exploreLink: '/plant-bud',
     url: 'https://ljames97.github.io/plant-bud',
     backgroundColor: 'bg-dark-brown'
+  },
+  {
+    title: 'MoodLab.',
+    description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customize, and share ideas in real time.',
+    skills: 'React, Tailwind CSS, FireBase, Next.js, Node.js.',
+    coverPhoto: moodBoardCover,
+    comingSoon: true
   }
 ]
 
