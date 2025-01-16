@@ -31,6 +31,7 @@ const Contact = () => {
 
     if (hasError) {
       setIsError(true);
+      setisSubmit(false);
       return;
     }
 
@@ -45,41 +46,54 @@ const Contact = () => {
   }
 
   return (
-    <div className="md:h-screen md:w-1/1 p-8 py-16 md:py-20 my-4 md:my-0 md:px-16 leading-relaxed bg-dark-teal">
-      <h1 className="text-lg pb-2">Let's work together!</h1>
-      <p className="mt-2 font-thin">I’m currently open to exciting opportunities. Let’s create something great together.</p>
+    <div className="md:flex md:flex-col md:justify-center md:items-center md:h-screen md:w-1/1 p-8 py-16 md:py-20 my-4 md:my-0 md:px-16 leading-relaxed bg-dark-teal">
+      <h1 className="text-4xl font-thin pb-2">Let's work together!</h1>
+      <p className="mt-2 font-thin text-xl w-1/2">I’m currently open to exciting opportunities. Let’s create something great together.</p>
       {isSubmit && (
-        <p className="my-8 text-deep-orange">Thank you for contacting me, I'll be in touch soon!</p>
+        <p className="-mb-4 mt-4 text-deep-orange">Thank you for contacting me, I'll be in touch soon!</p>
       )}
-      {isError ? <p aria-live="assertive" role="alert" className="mt-8 font-thin text-red-300">Please fill out all fields</p> : ''}
-      <form className="w-1/2 flex flex-col gap-4 mt-8" onSubmit={handleSubmit}>
-        <label htmlFor="name">Your Name</label>
-        <input 
-        type="text"
-        placeholder="Enter your name"
-        id="name"
-        value={formData.name}
-        onChange={handleChange}
-        aria-required="true"
-        />
-        <label htmlFor="email">Your Email</label>
-        <input 
-        placeholder="Enter your email address"
-        id="email"
-        value={formData.email}
-        onChange={handleChange}
-        aria-required="true"
-        />
-        <label htmlFor="message">Your Message</label>
-        <textarea 
-        className="border-b pb-2 mb-4 h-32 w-3/4 bg-transparent"
-        placeholder="Your Message"
-        id="message"
-        value={formData.message}
-        onChange={handleChange}
-        aria-required="true"
-        />
-        <button className="self-start bg-light-orange p-4 text-black rounded-3xl">Let's Chat</button>
+      {isError ? <p aria-live="assertive" role="alert" className="-mb-4 mt-4 font-thin text-red-300">Please fill out all fields</p> : ''}
+      <form className="w-1/2 flex flex-col gap-8 mt-16" onSubmit={handleSubmit}>
+        <div className="flex gap-4">
+          <div className="flex flex-col w-1/2">
+            <label htmlFor="name" className="text-sm mb-2">Your Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              id="name"
+              value={formData.name}
+              onChange={handleChange}
+              aria-required="true"
+              className="border-b pb-2 bg-transparent"
+            />
+          </div>
+          <div className="flex flex-col w-1/2">
+            <label htmlFor="email" className="text-sm mb-2">Your Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              id="email"
+              value={formData.email}
+              onChange={handleChange}
+              aria-required="true"
+              className="border-b pb-2 bg-transparent"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="message" className="text-sm mb-2">Your Message</label>
+          <textarea
+            className="resize-none border-b pb-2 h-16 bg-transparent"
+            placeholder="Hi, I'd like to work with you on a new project, can we arrange a time to discuss this?"
+            id="message"
+            value={formData.message}
+            onChange={handleChange}
+            aria-required="true"
+          />
+        </div>
+        <button className="w-1/3 bg-light-orange p-4 text-black rounded-3xl mt-8">
+          Let's Chat!
+        </button>
       </form>
     </div>
   )

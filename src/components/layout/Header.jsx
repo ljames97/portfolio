@@ -5,7 +5,7 @@ import { useTheme } from "../../store/ThemeContext";
 import MainLogo from "./MainLogo";
 import { Link } from 'react-router-dom';
 
-const Header = ({ toggleMobileMenu }) => {
+const Header = ({ toggleMobileMenu, isHomePage }) => {
   const { isDarkMode } = useTheme();
   const fill = isDarkMode ? 'white' : 'white'
   const [isCvModalVisible, setCvModalVisible] = useState(false);
@@ -13,7 +13,7 @@ const Header = ({ toggleMobileMenu }) => {
   const submenuRef = useRef(null);
   return (
     <>
-      <header className="md:absolute md:pt-16 md:dark:bg-transparent bg-dark-teal dark:bg-dark-teal p-12 flex justify-between items-center md:justify-start relative text-white dark:text-white">
+      <header className={`md:${isHomePage ? 'absolute' : ''} md:pt-16 dark:${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} p-12 flex justify-between items-center md:justify-start relative text-white dark:text-white`}>
         <MainLogo />
         <ul className="md:flex md:ml-20 hidden gap-16 text-xl tracking-widest tracking-wider font-thin items-center">
         <li className="tracking-widest">

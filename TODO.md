@@ -1,17 +1,14 @@
 TODO
 
 /desktop-css
-- contact
-- footer
-- about
-- projects
-- cv menu option
+- projects page
+- cv menu option for desktop
 
 - fix mobile issues
 - light theme
 
 /final-touches
-- animations (scroll, hover, menus)
+- animations (scroll, menu on homepage scroll, hover, menus)
 - final touches, sort out text content
 - email form funtionality
 - main logo
