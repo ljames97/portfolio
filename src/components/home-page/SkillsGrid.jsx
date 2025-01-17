@@ -7,10 +7,10 @@ const SkillsGrid = () => {
   const backgroundFill = isDarkMode ? '#a74d28' : '#e6ddd3'
   const mainFill = isDarkMode ? '#ede5dd' : '#051c26'
   return (
-    <div className="font-thin md:h-screen p-8 py-16 leading-relaxed bg-dark-teal text-white dark:bg-dark-blue">
+    <div className="font-thin md:h-screen md:p-8 py-16 leading-relaxed bg-dark-teal text-white dark:bg-dark-blue">
       <h1 className="text-center font-thin tracking-widest text-3xl py-4 mb-8 md:mb-0 md:pb-0">Skills</h1>
-      <div className="b flex justify-center my-12 md:my-0">
-        <div className="border md:w-2/3 md:py-16 md:px-0 rounded-3xl border-light-orange md:border-none bg-dark-blue p-8 grid grid-cols-3 gap-4 gap-y-8 md:gap-y-16">
+      <div className="flex justify-center my-12 md:my-0">
+        <div className=" md:w-2/3 md:py-16 md:px-0 rounded-3xl border-light-orange bg-dark-blue p-8 grid grid-cols-3 gap-4 gap-y-8 md:gap-y-16">
           <div className="flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 256 256">
               <rect width="256" height="256" fill={backgroundFill} rx="60"/>

@@ -13,7 +13,7 @@ const Header = ({ toggleMobileMenu, isHomePage }) => {
   const submenuRef = useRef(null);
   return (
     <>
-      <header className={`md:${isHomePage ? 'absolute' : ''} md:pt-16 dark:${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} p-12 flex justify-between items-center md:justify-start relative text-white dark:text-white`}>
+      <header className={`${isHomePage ? 'absolute' : ''} md:pt-16 dark:${isHomePage ? 'bg-transparent' : 'bg-dark-blue'} md:p-12 flex justify-between items-center md:justify-start text-white dark:text-white p-12 w-screen`}>
         <MainLogo />
         <ul className="md:flex md:ml-20 hidden gap-16 text-xl tracking-widest tracking-wider font-thin items-center">
         <li className="tracking-widest">

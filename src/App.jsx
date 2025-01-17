@@ -37,9 +37,9 @@ const MainContent = ({ toggleMobileMenu }) => {
     <>
       <Header toggleMobileMenu={toggleMobileMenu} isHomePage={isHomePage} />
       <main className="flex-1">
-        {isHomePage && <HomePage />}
+        {isHomePage && <HomePage isHomePage={isHomePage} />}
         {location.pathname === "/about" && <AboutPage />}
-        {location.pathname === "/projects" && <ProjectsPage />}
+        {location.pathname === "/projects" && <ProjectsPage isHomePage={isHomePage} />}
       </main>
       <Footer isHomePage={isHomePage} />
     </>

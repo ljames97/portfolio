@@ -1,16 +1,16 @@
 TODO
 
 /desktop-css
-- projects page
-- cv menu option for desktop
-
-- fix mobile issues
+- sort out weird about/projects pages with the header
 - light theme
 
 /final-touches
-- animations (scroll, menu on homepage scroll, hover, menus)
+- animations (hover, auto scroll, menu on homepage scroll, hover, 
+menus)
+- cv menu option for desktop
 - final touches, sort out text content
 - email form funtionality
 - main logo
 /production
+- clean up tailwind css
 

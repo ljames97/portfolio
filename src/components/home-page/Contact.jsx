@@ -46,16 +46,16 @@ const Contact = () => {
   }
 
   return (
-    <div className="md:flex md:flex-col md:justify-center md:items-center md:h-screen md:w-1/1 p-8 py-16 md:py-20 my-4 md:my-0 md:px-16 leading-relaxed bg-dark-teal">
+    <div className="md:flex md:flex-col md:justify-center md:items-center md:h-screen md:w-1/1 p-8 py-24 md:py-20 md:my-0 md:px-16 leading-relaxed bg-dark-teal">
       <h1 className="text-4xl font-thin pb-2">Let's work together!</h1>
-      <p className="mt-2 font-thin text-xl w-1/2">I’m currently open to exciting opportunities. Let’s create something great together.</p>
+      <p className="mt-4 md:mt-2 font-thin text-xl md:w-1/2">I’m currently open to exciting opportunities. Let’s create something great together.</p>
       {isSubmit && (
         <p className="-mb-4 mt-4 text-deep-orange">Thank you for contacting me, I'll be in touch soon!</p>
       )}
       {isError ? <p aria-live="assertive" role="alert" className="-mb-4 mt-4 font-thin text-red-300">Please fill out all fields</p> : ''}
-      <form className="w-1/2 flex flex-col gap-8 mt-16" onSubmit={handleSubmit}>
+      <form className="md:w-1/2 flex flex-col gap-8 mt-16" onSubmit={handleSubmit}>
         <div className="flex gap-4">
-          <div className="flex flex-col w-1/2">
+          <div className="flex flex-col md:w-1/2">
             <label htmlFor="name" className="text-sm mb-2">Your Name</label>
             <input
               type="text"
@@ -67,7 +67,7 @@ const Contact = () => {
               className="border-b pb-2 bg-transparent"
             />
           </div>
-          <div className="flex flex-col w-1/2">
+          <div className="flex flex-col md:w-1/2">
             <label htmlFor="email" className="text-sm mb-2">Your Email</label>
             <input
               type="email"
