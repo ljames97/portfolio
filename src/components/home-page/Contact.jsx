@@ -46,7 +46,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="md:flex md:flex-col md:justify-center md:items-center md:h-screen md:w-1/1 p-8 py-24 md:py-20 md:my-0 md:px-16 leading-relaxed bg-dark-teal">
+    <div className="text-black md:flex md:flex-col md:justify-center md:items-center md:h-screen md:w-1/1 p-8 py-24 md:py-20 md:my-0 md:px-16 leading-relaxed bg-off-white dark:bg-off-white">
       <h1 className="text-4xl font-thin pb-2">Let's work together!</h1>
       <p className="mt-4 md:mt-2 font-thin text-xl md:w-1/2">I’m currently open to exciting opportunities. Let’s create something great together.</p>
       {isSubmit && (
@@ -64,7 +64,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               aria-required="true"
-              className="border-b pb-2 bg-transparent"
+              className="border-b dark:border-black pb-2 bg-transparent"
             />
           </div>
           <div className="flex flex-col md:w-1/2">
@@ -76,14 +76,14 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               aria-required="true"
-              className="border-b pb-2 bg-transparent"
+              className="border-b dark:border-black pb-2 bg-transparent"
             />
           </div>
         </div>
         <div className="flex flex-col">
           <label htmlFor="message" className="text-sm mb-2">Your Message</label>
           <textarea
-            className="resize-none border-b pb-2 h-16 bg-transparent"
+            className="resize-none border-b border-black pb-2 h-16 bg-transparent"
             placeholder="Hi, I'd like to work with you on a new project, can we arrange a time to discuss this?"
             id="message"
             value={formData.message}
@@ -91,7 +91,7 @@ const Contact = () => {
             aria-required="true"
           />
         </div>
-        <button className="w-1/3 bg-light-orange p-4 text-black rounded-3xl mt-8">
+        <button className="w-1/3 bg-accent hover:bg-hover-accent p-4 text-black rounded-3xl mt-8">
           Let's Chat!
         </button>
       </form>

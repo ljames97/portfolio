@@ -32,10 +32,12 @@ const App = () => {
 const MainContent = ({ toggleMobileMenu }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isAboutPage = location.pathname === "/about";
+  const isProjectsPage = location.pathname === "/projects";
 
   return (
     <>
-      <Header toggleMobileMenu={toggleMobileMenu} isHomePage={isHomePage} />
+      <Header toggleMobileMenu={toggleMobileMenu} isHomePage={isHomePage} isAboutPage={isAboutPage} isProjectsPage={isProjectsPage} />
       <main className="flex-1">
         {isHomePage && <HomePage isHomePage={isHomePage} />}
         {location.pathname === "/about" && <AboutPage />}
