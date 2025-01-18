@@ -1,18 +1,12 @@
 // ProjectsPage.jsx
 
-import { comingSoon, projects } from "../data";
-import MainProjectWidget from "./MainProjectWidget";
+import Projects from "../home-page/project-section/Projects";
 
-const ProjectsPage = () => {
+const ProjectsPage = ({ isHomePage }) => {
   return (
-    <div className=" dark:bg-dark-blue p-10 pb-16">
-      <h1 className="text-xl tracking-widest">PROJECTS</h1>
-      <div className="mt-8">
-        {projects.map((project, index) => (
-          <MainProjectWidget key={index} project={project} CTA={true}/>
-        ))}
-      </div>
-      <MainProjectWidget project={comingSoon[0]} CTA={false}/>
+    <div className="px-8 md:px-16 md:py-24 py-24 dark:bg-off-white">
+      <h1 className="tracking-wide text-black font-thin text-5xl">My Projects</h1>
+      <Projects isHomePage={isHomePage} />
     </div>
   )
 }

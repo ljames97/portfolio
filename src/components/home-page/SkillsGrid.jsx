@@ -4,24 +4,24 @@ import { useTheme } from "../../store/ThemeContext";
 
 const SkillsGrid = () => {
   const { isDarkMode } = useTheme();
-  const backgroundFill = isDarkMode ? '#010f1a' : '#e6ddd3'
-  const mainFill = isDarkMode ? '#FFB347' : '#051c26'
+  const backgroundFill = isDarkMode ? '#ede5dd' : '#e6ddd3'
+  const mainFill = isDarkMode ? '#051c26' : '#051c26'
   return (
-    <div className="p-8 py-16 leading-relaxed bg-dark-teal text-white dark:bg-dark-teal">
-      <h1 className="tracking-widest text-2xl py-4 mb-8">Skills</h1>
-      <div className="flex justify-center my-12">
-        <div className="grid grid-cols-3 gap-4 gap-y-8">
+    <div className="font-thin md:h-screen md:p-8 py-16 leading-relaxed bg-dark-orange text-white dark:bg-dark-teal">
+      <h1 className="text-center font-thin tracking-widest text-3xl py-4 md:py-16 mb-8 md:mb-0 md:pb-0">Skills.</h1>
+      <div className="tracking-widest flex justify-center my-12 md:my-0">
+        <div className=" md:w-2/3 md:py-16 md:px-0 rounded-3xl border-light-orange bg-transparent dark:transparent p-8 grid grid-cols-3 gap-4 gap-y-8 md:gap-y-16">
           <div className="flex flex-col items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 256 256">
+            <svg className="group" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 256 256">
               <rect width="256" height="256" fill={backgroundFill} rx="60"/>
               <path fill={mainFill} d="M48 38L56.6098 134.593H167.32L163.605 176.023L127.959 185.661L92.38 176.037L90.0012 149.435H57.9389L62.5236 200.716L127.951 218.888L193.461 200.716L202.244 102.655H85.8241L82.901 69.9448H205.041H205.139L208 38H48Z"/>
               <path fill={mainFill} d="M128 38H48L56.6098 134.593H128V102.655H85.8241L82.901 69.9448H128V38Z"/>
               <path fill={mainFill} d="M128 185.647L127.959 185.661L92.38 176.037L90.0012 149.435H57.9388L62.5236 200.716L127.951 218.888L128 218.874V185.647Z"/>
             </svg>
-            <span className="mt-2 text-sm">HTML</span>
+            <span className=" mt-2 text-sm">HTML</span>
           </div>
           <div className="flex flex-col items-center">
-            <svg width="100" height="100" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="group" width="100" height="100" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="256" height="256" rx="60" fill={backgroundFill}/>
               <path d="M53.7527 102.651L56.6155 134.593H128.096V102.651H53.7527Z" fill={mainFill}/>
               <path d="M128.095 38H127.985H48L50.9036 69.9423H128.095V38Z" fill={mainFill}/>
@@ -33,7 +33,7 @@ const SkillsGrid = () => {
           <div className="flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 256 256">
               <rect width="256" height="256" rx="60" fill={backgroundFill} />
-              <path d="M67.31 213.93L86.9 202.08C90.68 208.78 94.12 214.45 102.37 214.45C110.27 214.45 115.26 211.35 115.26 199.33V117.53H139.31V199.67C139.31 224.58 124.71 235.93 103.4 235.93C84.15 235.93 72.98 225.96 67.31 213.93ZM152.38 211.35L171.97 200.01C177.13 208.43 183.83 214.62 195.68 214.62C205.65 214.62 212.01 209.64 212.01 202.76C212.01 194.51 205.48 191.59 194.48 186.78L188.47 184.2C171.11 176.82 159.6 167.54 159.6 147.95C159.6 129.9 173.35 116.15 194.83 116.15C210.12 116.15 221.12 121.48 229.02 135.4L210.29 147.43C206.17 140.04 201.7 137.12 194.83 137.12C187.78 137.12 183.31 141.59 183.31 147.43C183.31 154.65 187.78 157.57 198.09 162.04L204.1 164.61C224.55 173.38 236.07 182.31 236.07 202.42C236.07 224.07 219.05 235.93 196.2 235.93C173.86 235.93 159.43 225.27 152.38 211.35Z" fill={mainFill} />
+              <path d="M67.31 213.93L86.9 202.08C90.68 208.78 94.12 214.45 102.37 214.45C110.27 214.45 115.26 211.35 115.26 199.33V117.53H139.31V199.67C139.31 224.58 124.71 235.93 103.4 235.93C84.15 235.93 72.98 225.96 67.31 213.93ZM152.38 211.35L171.97 200.01C177.13 208.43 183.83 214.62 195.68 214.62C205.65 214.62 212.01 209.64 212.01 202.76C212.01 194.51 205.48 191.59 194.48 186.78L188.47 184.2C171.11 176.82 159.6 167.54 159.6 147.95C159.6 129.9 173.35 116.15 194.83 116.15C210.12 116.15 221.12 121.48 229.02 135.4L210.29 147.43C206.17 140.04 201.7 137.12 194.83 137.12C187.78 137.12 183.31 141.59 183.31 147.43C183.31 154.65 187.78 157.57 198.09 162.04L204.1 164.61C224.55 173.38 236.07 182.31 236.07 202.42C236.07 224.07 219.05 235.93 196.2 235.93C173.86 235.93 159.43 225.27 152.38 211.35Z" className="hover:fill-hover-accent" fill={mainFill} />
             </svg>
             <span className="mt-2 text-sm">JavaScript</span>
           </div>

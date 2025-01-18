@@ -1,19 +1,11 @@
 // ProjectSection.jsx
 
-import { projects } from "../../data";
-import ProjectWidget from "./ProjectWidget";
+import Projects from "./Projects";
 
-const ProjectSection = () => {
+const ProjectSection = ({ isHomePage }) => {
   return (
-    <div className="p-8 py-16 leading-relaxed text-white">
-      <div className="">
-        <h1 className="tracking-widest text-2xl py-4 mb-8 text-black dark:text-white">Recent Projects</h1>
-        <div className="">
-          {projects.map((project, index) => (
-            <ProjectWidget key={index} project={project}/>
-          ))}
-        </div>
-      </div>
+    <div className="md:h-screen md:px-24 md:pt-14 p-8 pb-16 leading-relaxed text-black md:flex bg-off-white">
+      <Projects isHomePage={isHomePage} />
     </div>
   )
 }
