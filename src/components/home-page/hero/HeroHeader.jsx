@@ -1,7 +1,6 @@
 // HeroHeader.jsx
 
 import SocialIcons from "../../global/SocialIcons";
-import HeroGraphic from "./HeroGraphic";
 
 const HeroHeader = () => {
   return (

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useTheme } from "../../store/ThemeContext";
 import MainLogo from "./MainLogo";
 import { Link } from 'react-router-dom';
+import MenuBars from "../global/MenuBars";
 
 const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) => {
   const { isDarkMode } = useTheme();
@@ -53,14 +54,10 @@ const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) =
           )}
         </li>
         </ul>
-      
-        <div className="md:hidden" onClick={toggleMobileMenu}>
-          <svg className="p-2 w-12 h-12" width="20" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="5" y="4" width="30" height="2" fill={fill} />
-              <rect x="1" y="12" width="30" height="2" fill={fill} />
-              <rect x="5" y="20" width="30" height="2" fill={fill} />
-          </svg>
+        <div className="md:hidden">
+          <MenuBars toggleMobileMenu={toggleMobileMenu} />
         </div>
+
       </header>
     </>
   )

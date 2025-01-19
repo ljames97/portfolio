@@ -21,7 +21,7 @@ const ProjectWidget = ({ project, isHomePage }) => {
   }
 
   return (
-    <div className={`shadow-xl transition-shadow md:${project.comingSoon && 'block'} sm:${project.comingSoon && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} ${isHomePage ? 'text-black' : 'text-white'} border h-1/1 md:w-1/3 md:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl`}>
+    <div className={`shadow-xl transition-shadow md:${project.comingSoon && 'block'} sm:${project.comingSoon && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-transparent'} ${isHomePage ? 'text-black' : 'text-black'} border h-1/1 md:w-1/3 md:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl`}>
       <div className="flex flex-col gap-2">
       <h3 className="tracking-widest text-2xl font-thin">{project.title}</h3>
       <p className="italic opacity-90 text-sm">{project.skills}</p>
@@ -39,7 +39,7 @@ const ProjectWidget = ({ project, isHomePage }) => {
         <button className="text-sm mr-8 bg-yellow-600 px-6 py-4 rounded">GitHub</button> */}
         <button onClick={handleLiveClick} className="p-4 hover:bg-green-hover-accent rounded-3xl bg-medium-green text-black text-sm mr-2">Live demo</button>
         <button onClick={handleGithubClick} className="hover:bg-hover-accent text-black text-sm bg-accent p-4 rounded-3xl mr-2">GitHub</button>
-        <button onClick={handleAboutClick} className="text-white opacity-80 ml-2 text-sm">About →</button>
+        <button onClick={handleAboutClick} className="text-black opacity-80 ml-2 text-sm">About →</button>
       </div>
       )}
         </div>
