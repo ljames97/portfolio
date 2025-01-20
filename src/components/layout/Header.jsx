@@ -55,7 +55,7 @@ const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) =
         </li>
         </ul>
         <div className="md:hidden">
-          <MenuBars toggleMobileMenu={toggleMobileMenu} />
+          <MenuBars fill={'white'} toggleMobileMenu={toggleMobileMenu} />
         </div>
 
       </header>

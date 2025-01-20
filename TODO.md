@@ -1,15 +1,17 @@
 TODO
 
 /animations
-- mobile menu animation (for mobile and desktop modal)
 - desktop menu underline animation
 - project loading animation
 
 /final-touches
 - cv menu option for desktop
 - final touches, sort out text content
-- email form funtionality
-- main logo
+- email form functionality
 /production
 - clean up tailwind css, clean up colours
+- function documentation
+- README
 
+- full about each project
+- add portfolio as a project

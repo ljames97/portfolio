@@ -6,17 +6,34 @@ import SkillsGrid from "./SkillsGrid";
 import Contact from "./Contact";
 import MenuBars from "../global/MenuBars";
 
-const HomePage = ({ isHomePage }) => {
+const HomePage = ({ isHomePage, toggleMobileMenu, isMobileMenuVisible }) => {
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
-  const footerRef = useRef(null); // Add a reference to the footer
+  const footerRef = useRef(null);
 
   const [menuBarOpacity, setMenuBarOpacity] = useState(0);
   const [menuFill, setMenuFill] = useState("white");
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  // Update the state for desktop/mobile detection
+  useEffect(() => {
+    const checkIsDesktop = () => {
+      setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
+    };
+
+    checkIsDesktop(); // Initial check
+    window.addEventListener("resize", checkIsDesktop); // Update on resize
+
+    return () => {
+      window.removeEventListener("resize", checkIsDesktop);
+    };
+  }, []);
 
   useEffect(() => {
+    if (!isDesktop) return; // Skip scroll handling for mobile
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
       const pageHeight = document.documentElement.scrollHeight; // Full page height
@@ -68,21 +85,23 @@ const HomePage = ({ isHomePage }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isDesktop]);
 
   return (
     <>
-      {/* Sticky Menu Bar */}
-      <div
-        className="fixed top-0 left-0 right-0 p-8 pr-10 z-50 flex justify-end"
-        style={{
-          opacity: menuBarOpacity,
-          pointerEvents: menuBarOpacity > 0 ? "auto" : "none",
-          transition: "opacity 0.5s ease-in-out, fill 0.5s ease-in-out",
-        }}
-      >
-        <MenuBars fill={menuFill} />
-      </div>
+      {/* Sticky Menu Bar - Only Render on Desktop */}
+      {isDesktop && (
+        <div
+          className={`${isMobileMenuVisible ? 'hidden' : 'fixed'} top-0 left-0 right-0 p-8 pr-10 z-50 flex justify-end`}
+          style={{
+            opacity: menuBarOpacity,
+            pointerEvents: menuBarOpacity > 0 ? "auto" : "none",
+            transition: "opacity 0.5s ease-in-out, fill 0.5s ease-in-out",
+          }}
+        >
+          <MenuBars fill={menuFill} toggleMobileMenu={toggleMobileMenu} />
+        </div>
+      )}
 
       {/* Sections */}
       <section>
@@ -100,15 +119,14 @@ const HomePage = ({ isHomePage }) => {
       <section id="contact" ref={contactRef}>
         <Contact />
       </section>
-      {/* Footer Section */}
       <footer ref={footerRef}>
-        {/* Your footer content here */}
       </footer>
     </>
   );
 };
 
 export default HomePage;
+
 
 
 

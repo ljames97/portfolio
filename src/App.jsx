@@ -22,7 +22,7 @@ const App = () => {
       <div className="flex flex-col min-h-screen">
         {isMobileMenuVisible && <MobileMenu toggleMobileMenu={toggleMobileMenu} />}
         <Routes>
-          <Route path="/" element={<MainContent toggleMobileMenu={toggleMobileMenu} footerRef={footerRef} />} />
+          <Route path="/" element={<MainContent toggleMobileMenu={toggleMobileMenu} footerRef={footerRef} isMobileMenuVisible={isMobileMenuVisible} />} />
           <Route path="/about" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
           <Route path="/projects" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
         </Routes>
@@ -31,7 +31,7 @@ const App = () => {
   );
 };
 
-const MainContent = ({ toggleMobileMenu, footerRef }) => {
+const MainContent = ({ toggleMobileMenu, footerRef, isMobileMenuVisible }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isAboutPage = location.pathname === "/about";
@@ -41,7 +41,7 @@ const MainContent = ({ toggleMobileMenu, footerRef }) => {
     <>
       <Header toggleMobileMenu={toggleMobileMenu} isHomePage={isHomePage} isAboutPage={isAboutPage} isProjectsPage={isProjectsPage} />
       <main className="flex-1">
-        {isHomePage && <HomePage isHomePage={isHomePage} footerRef={footerRef} />}
+        {isHomePage && <HomePage isHomePage={isHomePage} footerRef={footerRef} toggleMobileMenu={toggleMobileMenu} isMobileMenuVisible={isMobileMenuVisible} />}
         {location.pathname === "/about" && <AboutPage />}
         {location.pathname === "/projects" && <ProjectsPage isHomePage={isHomePage} />}
       </main>
