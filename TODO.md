@@ -1,8 +1,8 @@
 TODO
 
 /animations
-- desktop menu underline animation
 - project loading animation
+- home page sections animation
 
 /final-touches
 - cv menu option for desktop
@@ -11,7 +11,8 @@ TODO
 /production
 - clean up tailwind css, clean up colours
 - function documentation
-- README
+- README (tests)
+- production
 
 - full about each project
 - add portfolio as a project

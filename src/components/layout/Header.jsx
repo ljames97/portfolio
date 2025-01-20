@@ -17,14 +17,29 @@ const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) =
       <header className={`${isHomePage ? 'absolute' : ''} md:pt-16 ${isHomePage ? 'bg-transparent' : 'bg-blue-gradient-right'} ${isHomePage ? 'bg-transparent' : 'bg-blue-gradient-right'} md:p-12 flex justify-between items-center md:justify-start text-white dark:text-white p-12 w-screen`}>
         <MainLogo />
         <ul className="md:flex md:ml-20 hidden gap-16 text-xl tracking-widest tracking-wider font-thin items-center">
-        <li className={`tracking-widest ${isHomePage && 'underline'} hover:underline decoration-1 underline-offset-[12px]`}>
-          <Link to="/">Home</Link>
+        <li className={`relative group`}>
+          <Link to="/" className="relative inline-block">
+            Home
+            <span
+              className={`${isHomePage ? 'w-full' : 'w-0'} absolute left-0 -bottom-2 h-[1px] bg-white transition-all duration-300 ease-in-out group-hover:w-full`}
+            ></span>
+          </Link>
         </li>
-        <li className={`${isAboutPage && 'underline'} hover:underline decoration-1 underline-offset-[12px]`}>
-        <Link to="/about">About</Link>
+        <li className={`relative group`}>
+          <Link to="/about" className="relative inline-block">
+            About
+            <span
+              className={`${isAboutPage ? 'w-full' : 'w-0'} absolute left-0 -bottom-2 h-[1px] bg-white transition-all duration-300 ease-in-out group-hover:w-full`}
+            ></span>
+          </Link>
         </li>
-        <li className={`${isProjectsPage && 'underline'} hover:underline decoration-1 underline-offset-[12px]`}>
-        <Link to="/projects">Projects</Link>
+        <li className={`relative group`}>
+          <Link to="/projects" className="relative inline-block">
+            Projects
+            <span
+              className={`${isProjectsPage ? 'w-full' : 'w-0'} absolute left-0 -bottom-2 h-[1px] bg-white transition-all duration-300 ease-in-out group-hover:w-full`}
+            ></span>
+          </Link>
         </li>
         <li className="relative" ref={submenuRef}>
           <button onClick={toggleCvModal} className="">

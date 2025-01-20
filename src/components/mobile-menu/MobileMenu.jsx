@@ -46,7 +46,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
   return ReactDOM.createPortal(
     <div
       ref={modalRef}
-      className={`md:bg-dark-blue md:rounded-3xl md:inset-auto md:top-8 md:right-10 md:w-1/4 md:overflow-hidden md:h-3/4 fixed inset-0 flex flex-col bg-dark-blue w-full z-40 overflow-y-auto ${
+      className={` md:bg-dark-blue md:rounded-3xl md:inset-auto md:top-8 md:right-10 md:w-[25rem] md:overflow-hidden md:h-3/4 fixed inset-0 flex flex-col bg-dark-blue w-full z-40 overflow-y-auto ${
         isClosing ? "modal-fade-out" : "modal-animate"
       }`}
     >
