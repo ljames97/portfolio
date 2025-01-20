@@ -3,8 +3,9 @@
 import { useNavigate } from "react-router-dom";
 import { cv } from "../../assets";
 import SocialIcons from "../global/SocialIcons";
+import { forwardRef } from "react";
 
-const Footer = ({ isHomePage }) => {
+const Footer = forwardRef(({ isHomePage }, ref) => {
   const footer = true;
   const navigate = useNavigate();
   const handleClick = () => {
@@ -17,7 +18,7 @@ const Footer = ({ isHomePage }) => {
 
   return (
     <>
-      <footer className={`md:px-24 md:gap-8 md:${isHomePage ? 'h-screen' : ''} md:flex md:flex-col md:justify-center md:w-screen dark:bg-dark-teal bg-dark-blue text-white p-8 pt-12 md:pt-16`}>
+      <footer ref={ref} className={`md:px-24 md:gap-8 md:${isHomePage ? 'h-screen' : ''} md:flex md:flex-col md:justify-center md:w-screen dark:bg-dark-teal bg-dark-blue text-white p-8 pt-12 md:pt-16`}>
         <div className="mb-8">
           <h2 className="text-light-accent mt-8">CONTACT</h2>
           <p className="mt-2">lukedesmondjames@gmail.com</p>
@@ -38,6 +39,6 @@ const Footer = ({ isHomePage }) => {
       </footer>
     </>
   )
-}
+});
 
 export default Footer;

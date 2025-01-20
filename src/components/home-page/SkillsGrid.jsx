@@ -1,15 +1,38 @@
 // SkillsGrid.jsx
 
+import { useRef, useState } from "react";
 import { useTheme } from "../../store/ThemeContext";
+import { useInView } from "../hooks/useInView";
 
 const SkillsGrid = () => {
   const { isDarkMode } = useTheme();
   const backgroundFill = isDarkMode ? '#ede5dd' : '#e6ddd3'
   const mainFill = isDarkMode ? '#051c26' : '#051c26'
+  const sectionRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const isSectionVisible = useInView(sectionRef, { threshold: 0.2 });
+  if (isSectionVisible && !hasAnimated) {
+    setHasAnimated(true);
+  }
+
   return (
-    <div className="font-thin md:h-screen md:p-8 py-16 leading-relaxed bg-dark-orange text-white dark:bg-dark-teal">
-      <h1 className="text-center font-thin tracking-widest text-3xl py-4 md:py-16 mb-8 md:mb-0 md:pb-0">Skills.</h1>
-      <div className="tracking-widest flex justify-center my-12 md:my-0">
+    <div ref={sectionRef} className="font-thin md:h-screen md:p-8 py-16 leading-relaxed bg-dark-orange text-white dark:bg-dark-teal">
+      <h1 className="text-center font-thin tracking-widest text-3xl py-4 md:py-16 mb-8 md:mb-0 md:pb-0 transition-opacity transition-transform ease-out"
+          style={{
+            opacity: hasAnimated ? 1 : 0,
+            transform: hasAnimated ? 'translateY(0)' : 'translateY(20px)',
+            transition: 'transform 1s ease-out, opacity 1s ease-out',
+          }}
+      >
+        Skills.</h1>
+      <div className="tracking-widest flex justify-center my-12 md:my-0 transition-opacity transition-transform ease-out"
+      style={{
+        opacity: hasAnimated ? 1 : 0,
+        transform: hasAnimated ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'transform 1s ease-out, opacity 1s ease-out',
+      }}
+      >
         <div className=" md:w-2/3 md:py-16 md:px-0 rounded-3xl border-light-orange bg-transparent dark:transparent p-8 grid grid-cols-3 gap-4 gap-y-8 md:gap-y-16">
           <div className="flex flex-col items-center">
             <svg className="group" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 256 256">
@@ -33,7 +56,7 @@ const SkillsGrid = () => {
           <div className="flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 256 256">
               <rect width="256" height="256" rx="60" fill={backgroundFill} />
-              <path d="M67.31 213.93L86.9 202.08C90.68 208.78 94.12 214.45 102.37 214.45C110.27 214.45 115.26 211.35 115.26 199.33V117.53H139.31V199.67C139.31 224.58 124.71 235.93 103.4 235.93C84.15 235.93 72.98 225.96 67.31 213.93ZM152.38 211.35L171.97 200.01C177.13 208.43 183.83 214.62 195.68 214.62C205.65 214.62 212.01 209.64 212.01 202.76C212.01 194.51 205.48 191.59 194.48 186.78L188.47 184.2C171.11 176.82 159.6 167.54 159.6 147.95C159.6 129.9 173.35 116.15 194.83 116.15C210.12 116.15 221.12 121.48 229.02 135.4L210.29 147.43C206.17 140.04 201.7 137.12 194.83 137.12C187.78 137.12 183.31 141.59 183.31 147.43C183.31 154.65 187.78 157.57 198.09 162.04L204.1 164.61C224.55 173.38 236.07 182.31 236.07 202.42C236.07 224.07 219.05 235.93 196.2 235.93C173.86 235.93 159.43 225.27 152.38 211.35Z" className="hover:fill-hover-accent" fill={mainFill} />
+              <path d="M67.31 213.93L86.9 202.08C90.68 208.78 94.12 214.45 102.37 214.45C110.27 214.45 115.26 211.35 115.26 199.33V117.53H139.31V199.67C139.31 224.58 124.71 235.93 103.4 235.93C84.15 235.93 72.98 225.96 67.31 213.93ZM152.38 211.35L171.97 200.01C177.13 208.43 183.83 214.62 195.68 214.62C205.65 214.62 212.01 209.64 212.01 202.76C212.01 194.51 205.48 191.59 194.48 186.78L188.47 184.2C171.11 176.82 159.6 167.54 159.6 147.95C159.6 129.9 173.35 116.15 194.83 116.15C210.12 116.15 221.12 121.48 229.02 135.4L210.29 147.43C206.17 140.04 201.7 137.12 194.83 137.12C187.78 137.12 183.31 141.59 183.31 147.43C183.31 154.65 187.78 157.57 198.09 162.04L204.1 164.61C224.55 173.38 236.07 182.31 236.07 202.42C236.07 224.07 219.05 235.93 196.2 235.93C173.86 235.93 159.43 225.27 152.38 211.35Z" fill={mainFill} />
             </svg>
             <span className="mt-2 text-sm">JavaScript</span>
           </div>

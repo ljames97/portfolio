@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useReducer, useRef, useState } from "react"
 import HomePage from "./components/home-page/HomePage"
 import Footer from "./components/layout/Footer"
 import Header from "./components/layout/Header"
@@ -14,13 +14,15 @@ const App = () => {
     setIsMobileMenuVisible(!isMobileMenuVisible);
   };
 
+  const footerRef = useRef(null);
+
   return (
     <Router>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         {isMobileMenuVisible && <MobileMenu toggleMobileMenu={toggleMobileMenu} />}
         <Routes>
-          <Route path="/" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
+          <Route path="/" element={<MainContent toggleMobileMenu={toggleMobileMenu} footerRef={footerRef} isMobileMenuVisible={isMobileMenuVisible} />} />
           <Route path="/about" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
           <Route path="/projects" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
         </Routes>
@@ -29,7 +31,7 @@ const App = () => {
   );
 };
 
-const MainContent = ({ toggleMobileMenu }) => {
+const MainContent = ({ toggleMobileMenu, footerRef, isMobileMenuVisible }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isAboutPage = location.pathname === "/about";
@@ -39,11 +41,11 @@ const MainContent = ({ toggleMobileMenu }) => {
     <>
       <Header toggleMobileMenu={toggleMobileMenu} isHomePage={isHomePage} isAboutPage={isAboutPage} isProjectsPage={isProjectsPage} />
       <main className="flex-1">
-        {isHomePage && <HomePage isHomePage={isHomePage} />}
+        {isHomePage && <HomePage isHomePage={isHomePage} footerRef={footerRef} toggleMobileMenu={toggleMobileMenu} isMobileMenuVisible={isMobileMenuVisible} />}
         {location.pathname === "/about" && <AboutPage />}
         {location.pathname === "/projects" && <ProjectsPage isHomePage={isHomePage} />}
       </main>
-      <Footer isHomePage={isHomePage} />
+      <Footer ref={footerRef} isHomePage={isHomePage} />
     </>
   );
 };
