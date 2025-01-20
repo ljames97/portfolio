@@ -21,7 +21,7 @@ const ProjectWidget = ({ project, isHomePage }) => {
   }
 
   return (
-    <div className={`shadow-xl transition-shadow md:${project.comingSoon && 'block'} sm:${project.comingSoon && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} ${isHomePage ? 'text-black' : 'text-white'} border h-1/1 md:w-1/3 md:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl`}>
+    <div className={`shadow-xl transition-shadow md:${project.comingSoon && 'block'} sm:${project.comingSoon && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} ${isHomePage ? 'text-black' : 'text-white'} border h-1/1 md:w-full md:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl`}>
       <div className="flex flex-col gap-2">
       <h3 className="tracking-widest text-2xl font-thin">{project.title}</h3>
       <p className="italic opacity-90 text-sm">{project.skills}</p>

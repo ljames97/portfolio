@@ -1,6 +1,5 @@
 // AboutPage.jsx
 
-import { headshot } from "../../assets";
 import { useNavigate } from "react-router-dom";
 
 const AboutPage = () => {
@@ -10,9 +9,9 @@ const AboutPage = () => {
   }
 
   return (
-    <div className="text-black text-left flex flex-col items-center dark:bg-off-white p-12 md:px-16 md:py-24 py-24">
+    <div className="text-black text-left flex flex-col items-center dark:bg-off-white p-12 md:px-16 md:py-24 py-24 transition-opacity transition-transform ease-out">
       <div>
-        <h1 className="text-5xl tracking-wide font-thin ">About Me</h1>
+        <h1 className="text-5xl tracking-wide font-thin">About Me</h1>
         <p className="md:w-2/5 my-4 md:my-6 mt-10 md:mt-16 opacity-80">Hi, I’m Luke, a front-end web developer living in London. I work with React, Vanilla JavaScript, CSS, Tailwind, and Firebase to build responsive, user-focused web applications.</p>
         {/* <h1 className="w-2/5 mt-6 text-lg">Technical Skills</h1> */}
         <p className="md:w-2/5 my-4 md:my-6 opacity-80">I think having a solid grasp of vanilla JS and CSS is essential for understanding the core of web development and writing cleaner, more efficient code.</p>

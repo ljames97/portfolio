@@ -87,6 +87,8 @@ const HomePage = ({ isHomePage, toggleMobileMenu, isMobileMenuVisible }) => {
     };
   }, [isDesktop]);
 
+  
+
   return (
     <>
       {/* Sticky Menu Bar - Only Render on Desktop */}

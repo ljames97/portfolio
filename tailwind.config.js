@@ -59,6 +59,10 @@ export default {
         'blue-gradient': 'linear-gradient(to bottom, #010f1a, #051c26)',
         'blue-gradient-right': 'linear-gradient(to right, #010f1a, #051c26)',
       },
+      transitionProperty: {
+        opacity: "opacity",
+        transform: "transform",
+      },
 
     }
   },
