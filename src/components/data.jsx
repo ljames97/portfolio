@@ -1,6 +1,6 @@
 // data.jsx
 
-import { moodBoardCover, myChaiCover, myChaiCoverMobile, myChaiCoverMobile_2, myChaiCoverMobile_3, plantBudCover, plantBudCoverMobile, plantBudCoverMobile_2, plantBudCoverMobile_3 } from "../assets";
+import { moodBoardCover, myChaiCover, myChaiCoverMobile, myChaiCoverMobile_2, myChaiCoverMobile_3, plantBudCover, plantBudCoverMobile, plantBudCoverMobile_2, plantBudCoverMobile_3, portfolioCover } from "../assets";
 
 const projects = [
   {
@@ -29,21 +29,29 @@ const projects = [
     backgroundColor: 'bg-dark-brown'
   },
   {
+    title: 'Portfolio.',
+    description_1: 'This web developer portfolio, showcasing projects, skills and bio. Created using React and Tailwind CSS.',
+    skills: 'React, Tailwind CSS.',
+    coverPhoto: portfolioCover,
+    exploreLink: '/portfolio',
+    portfolio: true
+  },
+  {
+    title: 'MoodLab.',
+    description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customize, and share ideas in real time.',
+    skills: 'React, Tailwind CSS, FireBase, Next.js, Node.js.',
+    coverPhoto: moodBoardCover,
+    comingSoon: true,
+    comingSoonMobile: true
+  }
+]
+
+const comingSoon = {
     title: 'MoodLab.',
     description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customize, and share ideas in real time.',
     skills: 'React, Tailwind CSS, FireBase, Next.js, Node.js.',
     coverPhoto: moodBoardCover,
     comingSoon: true
   }
-]
-
-const comingSoon = [
-  {
-    title: 'MoodLab.',
-    description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customize, and share ideas in real time.',
-    skills: 'React, Tailwind CSS, FireBase, Next.js, Node.js.',
-    coverPhoto: moodBoardCover
-  }
-]
 
 export { projects, comingSoon };

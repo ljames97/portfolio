@@ -12,7 +12,7 @@ export { default as plantBudCoverMobile_3 } from './plant-bud-3.png';
 export { default as myChaiCoverMobile_3 } from './my-chai-3.png';
 export { default as moodBoardCover } from './mood-board.png';
 export { default as lightDarkMode } from './light-dark-mode.svg';
-export { default as geometric } from './geometric.png';
+export { default as portfolioCover } from './portfolio-cover.png';
 
 
 export { default as cv } from './my-cv.pdf';

@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { projects } from "../../data";
+import { comingSoon, projects } from "../../data";
 import ProjectWidget from "./ProjectWidget";
 import { useInView } from "../../hooks/useInView";
 
@@ -33,6 +33,14 @@ const Projects = ({ isHomePage }) => {
         {projects.map((project, index) => (
           <ProjectWidget project={project} key={index} isHomePage={isHomePage} />
         ))}
+      </div>
+      <div className={`w-full pr-32 self-start ${isHomePage && 'md:hidden'} transition-opacity transition-transform ease-out hidden md:block`}
+           style={{
+           opacity: hasAnimated ? 1 : 0,
+           transform: hasAnimated ? "translateY(0)" : "translateY(20px)",
+           transition: "transform 1s ease-out, opacity 1s ease-out",
+          }}>
+      <ProjectWidget project={comingSoon} isHomePage={isHomePage} />
       </div>
     </div>
   );

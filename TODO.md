@@ -2,7 +2,6 @@ TODO
 
 /final-touches
 - email form functionality
-- add portfolio as a project
 - github links for projects
 - sort out text content
 
