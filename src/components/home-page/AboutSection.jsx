@@ -10,7 +10,7 @@ const AboutSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   // Detect if the section is in view
-  const isSectionVisible = useInView(sectionRef, { threshold: 0.2 });
+  const isSectionVisible = useInView(sectionRef, { threshold: 0.3 });
 
   if (isSectionVisible && !hasAnimated) {
     setHasAnimated(true);

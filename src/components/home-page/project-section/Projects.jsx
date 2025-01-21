@@ -6,16 +6,8 @@ import { useInView } from "../../hooks/useInView";
 const Projects = ({ isHomePage }) => {
   const sectionRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const isSectionVisible = useInView(sectionRef, { threshold: 0.2 });
-
-  useEffect(() => {
-    if(!isHomePage) {
-      setHasAnimated(true)
-    }
-  })
+  const isSectionVisible = useInView(sectionRef, { threshold: 0.3 });
   
-
-
   if (isSectionVisible && !hasAnimated) {
     setHasAnimated(true);
   }
