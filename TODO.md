@@ -1,14 +1,12 @@
 TODO
 
-/final-touches
-- cv menu option for desktop
-- final touches, sort out text content
-- email form functionality
 /production
 - clean up tailwind css, clean up colours
 - function documentation, tidy up components
+- favicon
 - README (tests)
 - production
+- browser compatability
 
-- full about each project
-- add portfolio as a project
+
+- (full about for each project, better about page)

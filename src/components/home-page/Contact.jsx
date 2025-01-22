@@ -1,5 +1,6 @@
 // Contact.jsx
 
+import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
 import { useInView } from "../hooks/useInView";
 
@@ -25,30 +26,42 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const hasError = Object.values(formData).some((value) => {
-      if (typeof value === 'object' && value !== null) {
-        return Object.values(value).some((nestedValue) => nestedValue === '');
-      }
-      return value === '';
-    });
-
+  
+    const hasError = Object.values(formData).some((value) => value.trim() === '');
     if (hasError) {
       setIsError(true);
       setisSubmit(false);
       return;
     }
-
-    setisSubmit(true);
+  
     setIsError(false);
-    console.log(formData);
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
-  }
+  
+    // EmailJS configuration
+    emailjs
+      .send(
+        "service_ec3qiai", // EmailJS Service ID
+        "template_fc5jobp", // EmailJS Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "1UkFHKr604UHYVaZX" // EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Message Sent", result.text);
+          setisSubmit(true);
+          setFormData({ name: "", email: "", message: "" }); // Reset form
+        },
+        (error) => {
+          console.log("Error", error.text);
+          setisSubmit(false);
+        }
+      );
+  };
 
-  const isSectionVisible = useInView(sectionRef, { threshold: 0.2 });
+  const isSectionVisible = useInView(sectionRef, { threshold: 0.3 });
   if (isSectionVisible && !hasAnimated) {
     setHasAnimated(true);
   }

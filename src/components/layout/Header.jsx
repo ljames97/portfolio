@@ -5,6 +5,7 @@ import { useTheme } from "../../store/ThemeContext";
 import MainLogo from "./MainLogo";
 import { Link } from 'react-router-dom';
 import MenuBars from "../global/MenuBars";
+import { cv } from "../../assets";
 
 const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) => {
   const { isDarkMode } = useTheme();
@@ -42,13 +43,13 @@ const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) =
           </Link>
         </li>
         <li className="relative" ref={submenuRef}>
-          <button onClick={toggleCvModal} className="">
+          <button onMouseEnter={toggleCvModal} className="">
             CV
           </button>
           {/* CV submenu */}
           {isCvModalVisible && (
-            <ul className="text-black dark:text-white absolute left-0 mt-2 bg-translucent-black rounded shadow-lg w-40 text-sm py-4">
-            <li className="px-4 py-2">
+            <ul onMouseLeave={toggleCvModal} className="text-black dark:text-white absolute left-0 md:mt-0 mt-2 bg-translucent-black rounded shadow-lg w-40 text-sm py-4">
+            <li className="px-4 py-2 hover:bg-white/20 rounded">
               <a
                 href={cv}
                 target="_blank"
@@ -57,7 +58,7 @@ const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) =
                 View
               </a>
             </li>
-            <li className="px-4 py-2 hover:bg-gray-200">
+            <li className="px-4 py-2 hover:bg-white/20 rounded">
               <a
                 href={cv}
                 download="Luke_CV.pdf"

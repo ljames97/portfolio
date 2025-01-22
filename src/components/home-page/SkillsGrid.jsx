@@ -11,7 +11,7 @@ const SkillsGrid = () => {
   const sectionRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  const isSectionVisible = useInView(sectionRef, { threshold: 0.2 });
+  const isSectionVisible = useInView(sectionRef, { threshold: 0.3 });
   if (isSectionVisible && !hasAnimated) {
     setHasAnimated(true);
   }

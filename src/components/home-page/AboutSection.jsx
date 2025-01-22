@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import { useInView } from "../hooks/useInView";
+import { code } from "../../assets";
 
 const AboutSection = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const AboutSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   // Detect if the section is in view
-  const isSectionVisible = useInView(sectionRef, { threshold: 0.2 });
+  const isSectionVisible = useInView(sectionRef, { threshold: 0.3 });
 
   if (isSectionVisible && !hasAnimated) {
     setHasAnimated(true);
@@ -23,10 +24,10 @@ const AboutSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative min-h-screen md:px-16 md:flex md:flex-col md:justify-center md:items-center bg-dark-teal md:bg-blue-gradient p-8 py-16 leading-relaxed text-black md:mt-0"
+      className="relative md:h-screen md:px-16 flex flex-col justify-center md:items-center bg-dark-teal md:bg-blue-gradient p-8 py-24 pb-32 leading-relaxed text-black md:mt-0"
     >
       <h1
-        className="text-white text-center font-thin tracking-widest mt-8 mb-8 md:mb-0 text-3xl transition-opacity transition-transform ease-out"
+        className="text-white text-center font-thin tracking-widest mb-8 md:mb-0 text-3xl transition-opacity transition-transform ease-out"
         style={{
           opacity: hasAnimated ? 1 : 0,
           transform: hasAnimated ? "translateY(0)" : "translateY(20px)",
@@ -36,24 +37,25 @@ const AboutSection = () => {
         Bringing ideas to life...
       </h1>
       <div
-        className="z-10 md:mb-auto md:mt-10 border-dark-blue dark:border-off-white border p-8 rounded-3xl dark:text-white text-white bg-white dark:bg-transparent md:w-1/2"
+        className="flex flex-col items-center z-10 md:mb-auto md:mt-10 border-dark-blue dark:border-off-white border p-8 rounded-3xl dark:text-white text-white bg-white dark:bg-transparent md:w-1/2"
         style={{
           opacity: hasAnimated ? 1 : 0,
           transform: hasAnimated ? "translateY(0)" : "translateY(20px)",
           transition: "transform 1s ease-out 0.2s, opacity 1s ease-out", // Delay for staggered effect
         }}
       >
-        <p className="mt-4 font-thin">
-          I specialize in crafting modern, responsive websites with a focus on clean design and seamless user experiences.
-          With experience in technologies like React, Tailwind CSS, and JavaScript, I bring ideas to life on the web.
+        <div className=" w-1/4 mb-4 mt-4">
+          <img src={code}/>
+        </div>
+        <p className="mt-2 font-thin text-center">
+        Hi I'm Luke, I specialize in crafting modern, responsive websites with a focus on clean design and seamless user experiences.
+        With experience in technologies like React, Tailwind CSS, and JavaScript, I bring ideas to life on the web.
         </p>
-        <p className="mt-8 font-thin">
-          I specialize in crafting modern, responsive websites with a focus on clean design and seamless user experiences.
-          With experience in technologies like React, Tailwind CSS, and JavaScript, I bring ideas to life on the web.
-        </p>
+        {/* <p className="mt-8 font-thin text-center">
+        </p> */}
         <button
           onClick={handleClick}
-          className="mt-12 mb-4 p-4 w-1/1 bg-light-orange text-black dark:bg-accent hover:dark:bg-hover-accent rounded-3xl"
+          className=" mt-8 mb-4 p-4 w-1/1 bg-light-orange text-black dark:bg-accent hover:dark:bg-hover-accent rounded-3xl"
         >
           About me →
         </button>
