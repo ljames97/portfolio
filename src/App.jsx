@@ -22,7 +22,7 @@ const App = () => {
   const footerRef = useRef(null);
 
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         {isMobileMenuVisible && <MobileMenu toggleMobileMenu={toggleMobileMenu} />}
@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/projects" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
         </Routes>
       </div>
-    </Router>
+    </>
   );
 };
 
