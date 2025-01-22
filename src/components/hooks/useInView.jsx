@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 
+/**
+ * Custom hook to determin if a DOM element is in view.
+ */
 export const useInView = (ref, options = {}) => {
   const [isVisible, setIsVisible] = useState(false);
 

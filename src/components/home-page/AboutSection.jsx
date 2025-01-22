@@ -1,8 +1,13 @@
+// AboutSection.jsx
+
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import { useInView } from "../hooks/useInView";
 import { code } from "../../assets";
 
+/**
+ * Renders the about section on the homepage. Includes a graphic, about description and CTA about me button.
+ */
 const AboutSection = () => {
   const navigate = useNavigate();
   const sectionRef = useRef(null);
@@ -37,7 +42,7 @@ const AboutSection = () => {
         Bringing ideas to life...
       </h1>
       <div
-        className="flex flex-col items-center z-10 md:mb-auto md:mt-10 border-dark-blue dark:border-off-white border p-8 rounded-3xl dark:text-white text-white bg-white dark:bg-transparent md:w-1/2"
+        className="flex flex-col items-center z-10 md:mb-auto md:mt-10 border-off-white border p-8 rounded-3xl text-white bg-transparent md:w-1/2"
         style={{
           opacity: hasAnimated ? 1 : 0,
           transform: hasAnimated ? "translateY(0)" : "translateY(20px)",
@@ -55,7 +60,7 @@ const AboutSection = () => {
         </p> */}
         <button
           onClick={handleClick}
-          className=" mt-8 mb-4 p-4 w-1/1 bg-light-orange text-black dark:bg-accent hover:dark:bg-hover-accent rounded-3xl"
+          className=" mt-8 mb-4 p-4 w-1/1 text-black bg-accent hover:bg-hover-accent rounded-3xl"
         >
           About me →
         </button>

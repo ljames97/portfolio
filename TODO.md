@@ -1,12 +1,5 @@
 TODO
+- sort out medium screen css
 
-/production
-- clean up tailwind css, clean up colours
-- function documentation, tidy up components
-- favicon
-- README (tests)
-- production
-- browser compatability
-
-
-- (full about for each project, better about page)
+- mychai/plantbud domains
+- (full about for each project, better aboutme page with photo)

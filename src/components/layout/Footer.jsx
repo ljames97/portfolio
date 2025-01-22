@@ -5,6 +5,9 @@ import { cv } from "../../assets";
 import SocialIcons from "../global/SocialIcons";
 import { forwardRef } from "react";
 
+/**
+ * Renders footer including contact links, mini menu and copyright.
+ */
 const Footer = forwardRef(({ isHomePage }, ref) => {
   const footer = true;
   const navigate = useNavigate();
@@ -18,12 +21,12 @@ const Footer = forwardRef(({ isHomePage }, ref) => {
 
   return (
     <>
-      <footer ref={ref} className={`md:px-24 md:gap-8 md:${isHomePage ? 'h-screen' : ''} md:flex md:flex-col md:justify-center md:w-screen dark:bg-dark-teal bg-dark-blue text-white p-8 pt-12 md:pt-16`}>
+      <footer ref={ref} className={`md:px-24 md:gap-8 md:${isHomePage ? 'h-screen' : ''} md:flex md:flex-col md:justify-center md:w-screen bg-dark-teal text-white p-8 pt-12 md:pt-16`}>
         <div className="mb-8">
-          <h2 className="text-light-accent mt-8">CONTACT</h2>
+          <h2 className="text-accent mt-8">CONTACT</h2>
           <p className="mt-2">lukedesmondjames@gmail.com</p>
         </div>
-        <div className="border-b pb-24 border-light-accent">
+        <div className="border-b pb-24 border-accent">
           <ul>
             <li className="cursor-pointer" onClick={handleClick}>My Projects</li>
             <li className="cursor-pointer mt-2" onClick={handleCvClick}>My CV</li>

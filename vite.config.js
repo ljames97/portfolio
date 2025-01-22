@@ -13,4 +13,8 @@ export default defineConfig({
   server: {
     port: 3001,
   },
+  build: {
+    outDir: 'docs',
+  },
+  base: '/portfolio',
 })
