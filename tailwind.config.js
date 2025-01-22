@@ -18,7 +18,8 @@ export default {
         'off-white': '#ede5dd',
         'accent': '#FFB347',
         'hover-accent': '#ffa729',
-        'green-hover-accent': '#98fc98'
+        'green-hover-accent': '#98fc98',
+        'light-green': '#79be79'
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],

@@ -46,10 +46,10 @@ const ProjectWidget = ({ project, isHomePage }) => {
         {/* <button className="text-sm mr-8 bg-green-600 px-6 py-4 rounded">Live</button>
         <button className="text-sm mr-8 bg-yellow-600 px-6 py-4 rounded">GitHub</button> */}
         {!project.portfolio && (
-          <button onClick={handleLiveClick} className="p-4 hover:bg-green-hover-accent rounded-3xl bg-medium-green text-black text-sm">Live demo</button>
+          <button onClick={handleLiveClick} className="p-4 hover:bg-green-hover-accent rounded-3xl bg-light-green text-black text-sm">Live demo</button>
         )}
         <button onClick={handleGithubClick} className="hover:bg-hover-accent text-black text-sm bg-accent p-4 rounded-3xl">GitHub</button>
-        <button onClick={handleAboutClick} className="bg-dark-blue hover:bg-medium-blue p-4 rounded-3xl text-white opacity-80 text-sm">About</button>
+        {/* <button onClick={handleAboutClick} className="bg-dark-blue hover:bg-medium-blue p-4 rounded-3xl text-white opacity-80 text-sm">About</button> */}
       </div>
       )}
         </div>
