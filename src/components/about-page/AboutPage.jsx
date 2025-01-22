@@ -12,12 +12,11 @@ const AboutPage = () => {
     <div className="text-black text-left flex flex-col items-center dark:bg-off-white p-12 md:px-16 md:py-24 py-24 transition-opacity transition-transform ease-out">
       <div>
         <h1 className="text-5xl tracking-wide font-thin">About Me</h1>
-        <p className="md:w-2/5 my-4 md:my-6 mt-10 md:mt-16 opacity-80">Hi, I’m Luke, a front-end web developer living in London. I work with React, Vanilla JavaScript, CSS, Tailwind, and Firebase to build responsive, user-focused web applications.</p>
+        <p className="md:w-2/5 my-4 md:my-6 mt-10 md:mt-16 opacity-80">Hi, I’m Luke, a front-end web developer based in London. I specialize in building modern, responsive web applications using technologies like React, Vanilla JavaScript, CSS, Tailwind, Firebase, and Vite. I’m passionate about creating clean, user-focused designs that are intuitive and enjoyable to interact with.</p>
         {/* <h1 className="w-2/5 mt-6 text-lg">Technical Skills</h1> */}
-        <p className="md:w-2/5 my-4 md:my-6 opacity-80">I think having a solid grasp of vanilla JS and CSS is essential for understanding the core of web development and writing cleaner, more efficient code.</p>
+        <p className="md:w-2/5 my-4 md:my-6 opacity-80">I believe a strong foundation in vanilla JavaScript and CSS is key to writing efficient, maintainable code and truly understanding the core of web development. Whether it’s solving complex technical challenges or refining small details, I enjoy the creative problem-solving that comes with bringing projects to life on the web.</p>
         {/* <h1 className="w-2/5 mt-6 text-lg">Interests</h1> */}
-        <p className="md:w-2/5 my-4 md:my-6 opacity-80">I’m really interested in design, technology, and how AI is changing the way we build and interact with the web. Outside of development, I’m a jazz pianist and love exploring music. I’m also into writing and theatre, and I enjoy digging into the overlap between creativity and business.</p>
-        <p className="md:w-2/5 my-4 md:my-6 opacity-80">For me, web development is about more than just solving technical problems—it’s about creating things that feel intuitive and exciting to use.</p>
+        <p className="md:w-2/5 my-4 md:mt-6 opacity-80">For me, the web is all about connection—connecting people, ideas, and technology in meaningful ways. Outside of development, I enjoy exploring how creativity and technology intersect, whether it’s through writing, design, or music.</p>
         <button onClick={handleClick} className="mt-8 p-4  hover:bg-hover-accent bg-light-orange text-black rounded-3xl">My Projects →</button>
       </div>
 

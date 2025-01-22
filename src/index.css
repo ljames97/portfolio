@@ -27,7 +27,7 @@
   }
 
   input {
-    @apply bg-transparent border-black dark:border-white border-b pb-2 mb-4 w-3/4 dark:text-white text-black
+    @apply bg-transparent border-black dark:border-white border-b pb-2 mb-4 w-3/4 text-black
   }
 
   label {

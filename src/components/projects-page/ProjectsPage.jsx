@@ -1,7 +1,5 @@
 // ProjectsPage.jsx
 
-import { comingSoon } from "../data";
-import ProjectWidget from "../home-page/project-section/ProjectWidget";
 import Projects from "../home-page/project-section/Projects";
 
 const ProjectsPage = ({ isHomePage }) => {

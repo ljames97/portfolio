@@ -21,7 +21,7 @@ export default {
         'translucent-green': 'rgb(124, 252, 0, 0.5)',
 
         'dark-blue': '#010f1a',
-        'medium-blue': '#051c26',
+        'medium-blue': '#123653',
         'light-blue': '#4fbfc3',
         'aqua-blue': '#86f8fc',
         'slate-blue': '#7c9cf5',

@@ -13,6 +13,10 @@ export { default as myChaiCoverMobile_3 } from './my-chai-3.png';
 export { default as moodBoardCover } from './mood-board.png';
 export { default as lightDarkMode } from './light-dark-mode.svg';
 export { default as portfolioCover } from './portfolio-cover.png';
+export { default as code } from './code.png';
+export { default as moodCover } from './mood-cover.png';
+
+
 
 
 export { default as cv } from './my-cv.pdf';
