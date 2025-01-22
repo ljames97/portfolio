@@ -1,6 +1,6 @@
 // data.jsx
 
-import { moodBoardCover, moodCover, myChaiCover, myChaiCoverMobile, myChaiCoverMobile_2, myChaiCoverMobile_3, plantBudCover, plantBudCoverMobile, plantBudCoverMobile_2, plantBudCoverMobile_3, portfolioCover } from "../assets";
+import { moodBoardCover, myChaiCover, plantBudCover, portfolioCover } from "../assets";
 
 const projects = [
   {
@@ -8,7 +8,6 @@ const projects = [
     subtitle: 'Premium Tea E-Commerce Store',
     shortDescription: `MyChai is an ecommerce concept store for speciality loose leaf teas.`,
     description_1: 'MyChai is a concept eCommerce store for specialty loose-leaf teas, built to demonstrate proficiency in React and showcase design skills for eCommerce.',
-    coverPhotoMobile: [myChaiCoverMobile, myChaiCoverMobile_2, myChaiCoverMobile_3],
     coverPhoto: [myChaiCover],
     skills: 'React, SCSS, FireBase.',
     exploreLink: '/my-chai',
@@ -20,7 +19,6 @@ const projects = [
     title: 'PlantBud.',
     shortDescription: `PlantBud is a plant care assistant application for plant enthusiasts.`,
     description_1: 'PlantBud is a concept plant care management app, built to demonstrate proficiency in Vanilla JavaScript, CSS, and Firebase, showcasing core web development skills.',
-    coverPhotoMobile: [plantBudCoverMobile_3, plantBudCoverMobile, plantBudCoverMobile_2],
     coverPhoto: [plantBudCover],
     skills: 'Javascript, CSS, Firebase.',
     exploreLink: '/plant-bud',

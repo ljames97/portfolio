@@ -7,15 +7,19 @@ import { Link } from 'react-router-dom';
 import MenuBars from "../global/MenuBars";
 import { cv } from "../../assets";
 
+/**
+ * Renders header, including desktop menu
+ * @param {function} props.toggleMobileMenu 
+ * @param {boolean} props.isHomePage 
+ * @param {boolean} props.isAboutPage
+ */
 const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) => {
-  const { isDarkMode } = useTheme();
-  const fill = isDarkMode ? 'white' : 'black'
   const [isCvModalVisible, setCvModalVisible] = useState(false);
   const toggleCvModal = () => setCvModalVisible(!isCvModalVisible);
   const submenuRef = useRef(null);
   return (
     <>
-      <header className={`${isHomePage ? 'absolute' : ''} md:pt-16 ${isHomePage ? 'bg-transparent' : 'bg-blue-gradient-right'} ${isHomePage ? 'bg-transparent' : 'bg-blue-gradient-right'} md:p-12 flex justify-between items-center md:justify-start text-white dark:text-white p-12 w-screen`}>
+      <header className={`${isHomePage ? 'absolute' : ''} md:pt-16 ${isHomePage ? 'bg-transparent' : 'bg-blue-gradient-right'} ${isHomePage ? 'bg-transparent' : 'bg-blue-gradient-right'} md:p-12 flex justify-between items-center md:justify-start text-white p-12 w-screen`}>
         <MainLogo />
         <ul className="md:flex md:ml-20 hidden gap-16 text-xl tracking-widest tracking-wider font-thin items-center">
         <li className={`relative group`}>
@@ -48,7 +52,7 @@ const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) =
           </button>
           {/* CV submenu */}
           {isCvModalVisible && (
-            <ul onMouseLeave={toggleCvModal} className="text-black dark:text-white absolute left-0 md:mt-0 mt-2 bg-translucent-black rounded shadow-lg w-40 text-sm py-4">
+            <ul onMouseLeave={toggleCvModal} className="text-white absolute left-0 md:mt-0 mt-2 bg-translucent-black rounded shadow-lg w-40 text-sm py-4">
             <li className="px-4 py-2 hover:bg-white/20 rounded">
               <a
                 href={cv}

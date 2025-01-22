@@ -4,10 +4,12 @@ import { useRef, useState } from "react";
 import { useTheme } from "../../store/ThemeContext";
 import { useInView } from "../hooks/useInView";
 
+/**
+ * Renders skills (html, css, js etc) in a grid.
+ */
 const SkillsGrid = () => {
-  const { isDarkMode } = useTheme();
-  const backgroundFill = isDarkMode ? '#ede5dd' : '#e6ddd3'
-  const mainFill = isDarkMode ? '#051c26' : '#051c26'
+  const backgroundFill = '#ede5dd'
+  const mainFill = '#051c26'
   const sectionRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -17,7 +19,7 @@ const SkillsGrid = () => {
   }
 
   return (
-    <div ref={sectionRef} className="font-thin md:h-screen md:p-8 py-16 leading-relaxed bg-dark-orange text-white dark:bg-dark-teal">
+    <div ref={sectionRef} className="font-thin md:h-screen md:p-8 py-16 leading-relaxed text-white bg-dark-teal">
       <h1 className="text-center font-thin tracking-widest text-3xl py-4 md:py-16 mb-8 md:mb-0 md:pb-0 transition-opacity transition-transform ease-out"
           style={{
             opacity: hasAnimated ? 1 : 0,
@@ -33,7 +35,7 @@ const SkillsGrid = () => {
         transition: 'transform 1s ease-out, opacity 1s ease-out',
       }}
       >
-        <div className=" md:w-2/3 md:py-16 md:px-0 rounded-3xl border-light-orange bg-transparent dark:transparent p-8 grid grid-cols-3 gap-4 gap-y-8 md:gap-y-16">
+        <div className=" md:w-2/3 md:py-16 md:px-0 rounded-3xl bg-transparent p-8 grid grid-cols-3 gap-4 gap-y-8 md:gap-y-16">
           <div className="flex flex-col items-center">
             <svg className="group" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 256 256">
               <rect width="256" height="256" fill={backgroundFill} rx="60"/>

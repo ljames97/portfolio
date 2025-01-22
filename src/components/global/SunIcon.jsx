@@ -1,5 +1,9 @@
 // SunIcon.jsx
 
+/**
+ * Renders a sun icon and handles click event to trigger light/dark mode.
+ */
+
 import { useTheme } from "../../store/ThemeContext";
 
 const SunIcon = () => {

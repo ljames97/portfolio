@@ -1,9 +1,13 @@
 import ReactDOM from "react-dom";
-import Socials from "../home-page/hero/Socials";
 import { Link } from "react-router-dom";
 import { cv } from "../../assets";
 import { useEffect, useRef, useState } from "react";
+import SocialIcons from "../global/SocialIcons";
 
+/**
+ * Renders mobile menu, attaching to modal-root in the DOM. 
+ * @param {function} toggleMobileMenu 
+ */
 const MobileMenu = ({ toggleMobileMenu }) => {
   const [isCvModalVisible, setCvModalVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false); // New state for fade-out
@@ -80,7 +84,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
             CV
           </button>
           {isCvModalVisible && (
-            <ul className="text-black dark:text-white absolute left-0 mt-2 bg-translucent-black rounded shadow-lg w-40 text-sm py-4">
+            <ul className="text-white absolute left-0 mt-2 bg-translucent-black rounded shadow-lg w-40 text-sm py-4">
               <li className="cursor-pointer rounded px-4 py-2 hover:bg-white/20">
                 <a href={cv} target="_blank" rel="noopener noreferrer">
                   View
@@ -99,10 +103,12 @@ const MobileMenu = ({ toggleMobileMenu }) => {
         className="animate-slide-up"
         style={{ animationDelay: "0.4s" }}
       >
-        <Socials />
+        <div className="flex gap-8 pb-8 pl-12">
+          <SocialIcons widthHeight={'25'} />
+        </div>
       </div>
       <p
-        className="md:text-base px-12 tracking-widest opacity-80 text-dark-teal dark:text-white animate-slide-up"
+        className="md:text-base px-12 tracking-widest opacity-80 text-white animate-slide-up"
         style={{ animationDelay: "0.5s" }}
       >
         lukedesmondjames@gmail.com

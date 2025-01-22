@@ -4,6 +4,10 @@ import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
 import { useInView } from "../hooks/useInView";
 
+/**
+ * Renders the contact form on the homepage.
+ * Includes emailjs configuration for sending message via email.
+ */
 const Contact = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
@@ -52,7 +56,7 @@ const Contact = () => {
         (result) => {
           console.log("Message Sent", result.text);
           setisSubmit(true);
-          setFormData({ name: "", email: "", message: "" }); // Reset form
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.log("Error", error.text);
@@ -67,7 +71,7 @@ const Contact = () => {
   }
 
   return (
-    <div ref={sectionRef} className="text-black md:flex md:flex-col md:justify-center md:items-center md:h-screen md:w-1/1 p-8 py-24 md:py-20 md:my-0 md:px-16 leading-relaxed bg-off-white dark:bg-off-white">
+    <div ref={sectionRef} className="text-black md:flex md:flex-col md:justify-center md:items-center md:h-screen md:w-1/1 p-8 py-24 md:py-20 md:my-0 md:px-16 leading-relaxed bg-off-white">
         <h1 className="text-4xl font-thin pb-2 transition-opacity transition-transform ease-out"
             style={{
               opacity: hasAnimated ? 1 : 0,
@@ -105,7 +109,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 aria-required="true"
-                className="border-b dark:border-black pb-2 bg-transparent"
+                className="border-b border-black pb-2 bg-transparent"
               />
             </div>
             <div className="flex flex-col md:w-1/2">
@@ -117,7 +121,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 aria-required="true"
-                className="border-b dark:border-black pb-2 bg-transparent"
+                className="border-b border-black pb-2 bg-transparent"
               />
             </div>
           </div>

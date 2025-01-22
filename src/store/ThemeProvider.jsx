@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react"
 import ThemeContext from "./ThemeContext";
 
+/**
+ * Provider for dark/light theme. Add/remove dark classlist for tailwind.
+ */
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 

@@ -1,5 +1,9 @@
 // MenuBars.jsx 
 
+/**
+ * Renders a hamburger menu icon and handle click events to toggle a mobile menu.
+ */
+
 const MenuBars = ({ fill, toggleMobileMenu }) => {
   return (
     <div className="cursor-pointer" onClick={toggleMobileMenu}>

@@ -5,9 +5,14 @@ import Header from "./components/layout/Header"
 import MobileMenu from "./components/mobile-menu/MobileMenu"
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import AboutPage from "./components/about-page/AboutPage"
-import ProjectsPage from "./components/projects-page/ProjectsPage"
+import ProjectsPage from "./components/ProjectsPage"
 import ScrollToTop from "./components/global/ScrollToTop"
 
+/**
+ * Root application component.
+ *
+ * Sets up routing for the application using `react-router-dom` and manages the global state for the mobile menu.
+ */
 const App = () => {
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const toggleMobileMenu = () => {
@@ -31,6 +36,17 @@ const App = () => {
   );
 };
 
+/**
+ * MainContent Component
+ *
+ * Renders the header, main content, and footer for the current route.
+ * Determines the page type based on the current route (`/`, `/about`, `/projects`) and renders
+ * the appropriate components.
+ *
+ * @param {Function} props.toggleMobileMenu - Function to toggle the mobile menu.
+ * @param {React.RefObject} [props.footerRef] - Reference to the footer element (used on the homepage).
+ * @param {boolean} [props.isMobileMenuVisible] - Indicates if the mobile menu is visible.
+ */
 const MainContent = ({ toggleMobileMenu, footerRef, isMobileMenuVisible }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";

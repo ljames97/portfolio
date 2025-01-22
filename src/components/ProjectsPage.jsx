@@ -1,10 +1,14 @@
 // ProjectsPage.jsx
 
-import Projects from "../home-page/project-section/Projects";
+import Projects from "./home-page/project-section/Projects";
 
+/**
+ * Renders projects page
+ * @param {boolean} props.isHomePage
+ */
 const ProjectsPage = ({ isHomePage }) => {
   return (
-    <div className="px-8 md:px-16 md:py-24 py-24 dark:bg-off-white">
+    <div className="px-8 md:px-16 md:py-24 py-24 bg-off-white">
       <h1 className="tracking-wide text-black font-thin text-5xl">My Projects</h1>
       <Projects isHomePage={isHomePage} />
     </div>
