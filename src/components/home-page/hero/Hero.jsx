@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="pb-0 md:pb-12 p-12 md:px-8 mb-4 md:mt-24 text-left text-white">
         <h1 className="text-accent text-5xl md:text-8xl">Luke James</h1>
         <h1 className="text-white font-thin text-3xl md:text-7xl md:border-none md:pb-0">Frontend Developer.</h1>
-        <p className="text-lg font-thin pt-4 md:pt-6 pr-4">I like to build modern websites with creativity, vision and elegant designs.</p>
+        <p className="text-lg font-thin pt-4 md:pt-6 pr-4">I build modern websites with creativity, vision and elegant design.</p>
         <div className="flex gap-10 mt-10">
           <SocialIcons widthHeight={'30'} />
         </div>
