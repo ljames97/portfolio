@@ -30,7 +30,7 @@ const ProjectWidget = ({ project, isHomePage }) => {
   return (
     <div className={`shadow-xl transition-shadow ${project.comingSoonMobile && 'lg:block'} ${project.comingSoonMobile && !isHomePage && 'lg:hidden'} ${project.comingSoonMobile && isHomePage && 'hidden'} ${project.portfolio && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} ${isHomePage ? 'text-black' : 'text-white'} border h-1/1 lg:w-1/3 lg:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl flex flex-col`}>
       <div className="flex flex-col gap-2 h-full">
-        <h3 className="tracking-widest text-2xl font-thin">{project.title}</h3>
+        <h3 className="tracking-wide text-2xl font-thin">{project.title}</h3>
         <p className="italic opacity-90 text-sm">{project.skills}</p>
         <div onClick={project.url && handleLiveClick} className={`${project.url && 'cursor-pointer'} w-1/1`}>
           <img className={`w-1/1 border border-transparent w-6/7 rounded-xl mt-4`} src={project.coverPhoto} alt="project cover photo"/>
