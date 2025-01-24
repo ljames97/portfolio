@@ -22,7 +22,7 @@ const Projects = ({ isHomePage }) => {
   
   return (
     <div ref={sectionRef} className="md:flex md:flex-col items-center">
-      <h1 className="text-black self-center font-thin tracking-widest text-3xl py-4 mb-8 transition-opacity transition-transform ease-out"
+      <h1 className="text-black self-center font-thin tracking-wide text-3xl py-4 mb-8 transition-opacity transition-transform ease-out"
           style={{
             opacity: hasAnimated ? 1 : 0,
             transform: hasAnimated ? "translateY(0)" : "translateY(20px)",

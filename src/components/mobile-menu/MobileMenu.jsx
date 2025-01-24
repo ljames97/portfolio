@@ -58,11 +58,12 @@ const MobileMenu = ({ toggleMobileMenu }) => {
         <button
           className="md:pt-4 pr-4 md:text-3xl text-2xl font-thin opacity-80"
           onClick={handleCloseMenu}
+          aria-label="close menu"
         >
           X
         </button>
       </div>
-      <ul className="md:text-base md:pt-0 p-12 mb-16 text-xl tracking-widest opacity-80 text-dark-teal text-white">
+      <ul className="md:text-base md:pt-0 p-12 mb-16 overflow-visible text-xl tracking-widest opacity-80 text-dark-teal text-white">
         {["Home", "About", "Projects"].map((item, index) => (
           <li
             key={item}

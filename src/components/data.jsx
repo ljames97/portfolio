@@ -37,7 +37,7 @@ const projects = [
   },
   {
     title: 'MoodLab.',
-    description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customize, and share ideas in real time.',
+    description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customise, and share ideas in real time.',
     skills: 'React, Tailwind CSS, FireBase, Next.js, Node.js.',
     coverPhoto: moodBoardCover,
     comingSoon: true,
@@ -47,7 +47,7 @@ const projects = [
 
 const comingSoon = {
     title: 'MoodLab.',
-    description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customize, and share ideas in real time.',
+    description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customise, and share ideas in real time.',
     skills: 'React, Tailwind CSS, FireBase, Next.js, Node.js.',
     coverPhoto: moodBoardCover,
     comingSoon: true

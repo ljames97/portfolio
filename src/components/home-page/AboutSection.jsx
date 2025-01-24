@@ -1,7 +1,7 @@
 // AboutSection.jsx
 
 import { useNavigate } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useInView } from "../hooks/useInView";
 import { code } from "../../assets";
 
@@ -32,7 +32,7 @@ const AboutSection = () => {
       className="relative md:h-screen md:px-16 flex flex-col justify-center md:items-center bg-dark-teal md:bg-blue-gradient p-8 py-24 pb-32 leading-relaxed text-black md:mt-0"
     >
       <h1
-        className="text-white text-center font-thin tracking-widest mb-8 md:mb-0 text-3xl transition-opacity transition-transform ease-out"
+        className="text-white text-center font-thin tracking-wide mb-8 md:mb-0 text-3xl transition-opacity transition-transform ease-out"
         style={{
           opacity: hasAnimated ? 1 : 0,
           transform: hasAnimated ? "translateY(0)" : "translateY(20px)",
@@ -50,10 +50,10 @@ const AboutSection = () => {
         }}
       >
         <div className=" w-1/4 mb-4 mt-4">
-          <img src={code}/>
+          <img src={code} alt="coding graphic"/>
         </div>
         <p className="mt-2 font-thin text-center">
-        Hi I'm Luke, I specialize in crafting modern, responsive websites with a focus on clean design and seamless user experiences.
+        Hi I'm Luke, I specialise in crafting modern, responsive websites with a focus on clean design and seamless user experiences.
         With experience in technologies like React, Tailwind CSS, and JavaScript, I bring ideas to life on the web.
         </p>
         {/* <p className="mt-8 font-thin text-center">
