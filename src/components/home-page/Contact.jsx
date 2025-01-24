@@ -80,7 +80,7 @@ const Contact = () => {
             }}
         >
           Let's work together!</h1>
-        <p className="mt-4 md:mt-2 font-thin text-xl md:w-1/2 transition-opacity transition-transform ease-out"
+        <p className="mt-4 md:mt-2 font-thin text-xl md:w-1/2 w-full transition-opacity transition-transform ease-out"
             style={{
               opacity: hasAnimated ? 1 : 0,
               transform: hasAnimated ? 'translateY(0)' : 'translateY(20px)',
@@ -136,7 +136,7 @@ const Contact = () => {
               aria-required="true"
             />
           </div>
-          <button className="w-1/3 bg-accent hover:bg-hover-accent p-4 text-black rounded-3xl mt-8">
+          <button className="md:w-1/3 w-full bg-accent hover:bg-hover-accent p-4 text-black rounded-3xl mt-8">
             Let's Chat!
           </button>
         </form>

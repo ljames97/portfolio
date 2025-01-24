@@ -18,7 +18,7 @@ const MainLogo = ({ toggleMobileMenu }) => {
   return (
     <>
       <div onClick={handleLogoClick} className="w-20 h-20 cursor-pointer">
-        <img className="rounded-full" src={headshot}/>
+        <img className="rounded-full" src={headshot} alt="headshot"/>
       </div>
     </>
   )

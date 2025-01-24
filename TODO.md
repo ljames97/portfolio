@@ -1,5 +1,3 @@
 TODO
-- sort out medium screen css
-
-- mychai/plantbud domains
+- mychai/plantbud custom domains
 - (full about for each project, better aboutme page with photo)

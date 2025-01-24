@@ -58,11 +58,12 @@ const MobileMenu = ({ toggleMobileMenu }) => {
         <button
           className="md:pt-4 pr-4 md:text-3xl text-2xl font-thin opacity-80"
           onClick={handleCloseMenu}
+          aria-label="close menu"
         >
           X
         </button>
       </div>
-      <ul className="md:text-base md:pt-0 p-12 mb-16 text-xl tracking-widest opacity-80 text-dark-teal text-white">
+      <ul className="md:text-base md:pt-0 p-12 text-xl tracking-widest opacity-80 text-dark-teal text-white">
         {["Home", "About", "Projects"].map((item, index) => (
           <li
             key={item}
@@ -103,7 +104,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
         className="animate-slide-up"
         style={{ animationDelay: "0.4s" }}
       >
-        <div className="flex gap-8 pb-8 pl-12">
+        <div className="flex gap-8 pb-8 pl-12 mt-16">
           <SocialIcons widthHeight={'25'} />
         </div>
       </div>

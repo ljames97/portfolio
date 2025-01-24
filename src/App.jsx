@@ -22,6 +22,7 @@ const App = () => {
   const footerRef = useRef(null);
 
   return (
+    // <Router>
     <>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
@@ -33,6 +34,7 @@ const App = () => {
         </Routes>
       </div>
     </>
+    // </Router>
   );
 };
 
