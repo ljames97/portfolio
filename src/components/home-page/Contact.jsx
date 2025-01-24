@@ -136,7 +136,7 @@ const Contact = () => {
               aria-required="true"
             />
           </div>
-          <button className="md:w-1/3 w-full bg-accent hover:bg-hover-accent p-4 text-black rounded-3xl mt-8">
+          <button className="md:w-1/3 w-2/3 bg-accent hover:bg-hover-accent p-4 text-black rounded-3xl mt-8">
             Let's Chat!
           </button>
         </form>
