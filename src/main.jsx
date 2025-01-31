@@ -7,7 +7,7 @@ import { ThemeProvider } from './store/ThemeProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter basename="/">
       <ThemeProvider>
         <App />
       </ThemeProvider>
