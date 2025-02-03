@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'PlantBud.',
     shortDescription: `PlantBud is a plant care assistant application for plant enthusiasts.`,
-    description_1: 'PlantBud is a concept plant care management app, built to demonstrate proficiency in Vanilla JavaScript, CSS, and Firebase, showcasing core web development skills.',
+    description_1: 'PlantBud is a concept plant care management app, built to demonstrate proficiency in Vanilla JavaScript and CSS, showcasing core frontend web development skills.',
     coverPhoto: [plantBudCover],
     skills: 'Javascript, CSS, Firebase.',
     exploreLink: '/plant-bud',
