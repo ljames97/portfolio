@@ -10,7 +10,7 @@ const SocialIcons = ({ widthHeight }) => {
   }
 
   const handleLinkedinClick = () => {
-    window.open('https://www.linkedin.com/in/luke-james-40b241281/', '_blank', 'noopener,noreferrer');
+    window.open('https://www.linkedin.com/in/luke-james-dev', '_blank', 'noopener,noreferrer');
   }
 
   const handleInstagramClick = () => {
