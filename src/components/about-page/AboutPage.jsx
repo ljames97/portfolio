@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const AboutPage = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/projects')
+    navigate('/portfolio')
   }
 
   return (

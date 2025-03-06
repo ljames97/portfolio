@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 const ProjectWidget = ({ project, isHomePage }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/projects')
+    navigate('/portfolio')
   }
 
   const handleLiveClick = () => {
@@ -24,11 +24,11 @@ const ProjectWidget = ({ project, isHomePage }) => {
   }
 
   const handleAboutClick = () => {
-    
+    navigate(`/portfolio${project.exploreLink}`);
   }
 
   return (
-    <div className={`shadow-xl transition-shadow ${project.comingSoonMobile && 'lg:block'} ${project.comingSoonMobile && !isHomePage && 'lg:hidden'} ${project.comingSoonMobile && isHomePage && 'hidden'} ${project.portfolio && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} ${isHomePage ? 'text-black' : 'text-white'} border h-1/1 lg:w-1/3 lg:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl flex flex-col`}>
+    <div className={`shadow-xl transition-shadow ${project.comingSoon && isHomePage && 'hidden lg:block'} ${project.portfolio && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} ${isHomePage ? 'text-black' : 'text-white'} border h-1/1 lg:w-2/5 md:w-1/1 lg:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl flex flex-col`}>
       <div className="flex flex-col gap-2 h-full">
         <h3 className="tracking-wide text-2xl font-thin">{project.title}</h3>
         <p className="italic opacity-90 text-sm">{project.skills}</p>
@@ -45,11 +45,15 @@ const ProjectWidget = ({ project, isHomePage }) => {
         <div className="mt-8 flex gap-4 flex-wrap">
         {/* <button className="text-sm mr-8 bg-green-600 px-6 py-4 rounded">Live</button>
         <button className="text-sm mr-8 bg-yellow-600 px-6 py-4 rounded">GitHub</button> */}
+        {project.caseStudy && (
+          <button onClick={handleAboutClick} className="bg-transparent border-white border hover:bg-white/20 p-4 rounded-3xl text-white text-sm">Case Study →</button>
+        )}
+        <button onClick={handleGithubClick} className="hover:bg-white/20 text-white text-sm bg-transparent border border-white p-4 rounded-3xl">GitHub</button>
+
         {!project.portfolio && (
           <button onClick={handleLiveClick} className="p-4 hover:bg-green-hover-accent rounded-3xl bg-light-green text-black text-sm">Live demo</button>
         )}
-        <button onClick={handleGithubClick} className="hover:bg-hover-accent text-black text-sm bg-accent p-4 rounded-3xl">GitHub</button>
-        {/* <button onClick={handleAboutClick} className="bg-dark-blue hover:bg-medium-blue p-4 rounded-3xl text-white opacity-80 text-sm">About</button> */}
+        
       </div>
       )}
         </div>

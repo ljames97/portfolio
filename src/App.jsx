@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import AboutPage from "./components/about-page/AboutPage"
 import ProjectsPage from "./components/ProjectsPage"
 import ScrollToTop from "./components/global/ScrollToTop"
+import CaseStudy from "./components/case-study/CaseStudy"
 
 /**
  * Root application component.
@@ -30,7 +31,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainContent toggleMobileMenu={toggleMobileMenu} footerRef={footerRef} isMobileMenuVisible={isMobileMenuVisible} />} />
           <Route path="/about" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
-          <Route path="/projects" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
+          <Route path="/portfolio" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
+          <Route path="/portfolio/:id" element={<MainContent toggleMobileMenu={toggleMobileMenu} />} />
         </Routes>
       </div>
     </>
@@ -53,7 +55,8 @@ const MainContent = ({ toggleMobileMenu, footerRef, isMobileMenuVisible }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isAboutPage = location.pathname === "/about";
-  const isProjectsPage = location.pathname === "/projects";
+  const isProjectsPage = location.pathname.startsWith("/portfolio");
+  const isCaseStudy = location.pathname.startsWith("/portfolio/");
 
   return (
     <>
@@ -61,7 +64,8 @@ const MainContent = ({ toggleMobileMenu, footerRef, isMobileMenuVisible }) => {
       <main className="flex-1">
         {isHomePage && <HomePage isHomePage={isHomePage} footerRef={footerRef} toggleMobileMenu={toggleMobileMenu} isMobileMenuVisible={isMobileMenuVisible} />}
         {location.pathname === "/about" && <AboutPage />}
-        {location.pathname === "/projects" && <ProjectsPage isHomePage={isHomePage} />}
+        {location.pathname === "/portfolio" && <ProjectsPage isHomePage={isHomePage} />}
+        {isCaseStudy && <CaseStudy />}
       </main>
       <Footer ref={footerRef} isHomePage={isHomePage} />
     </>

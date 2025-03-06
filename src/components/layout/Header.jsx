@@ -6,6 +6,7 @@ import MainLogo from "./MainLogo";
 import { Link } from 'react-router-dom';
 import MenuBars from "../global/MenuBars";
 import { cv } from "../../assets";
+import SocialIcons from "../global/SocialIcons";
 
 /**
  * Renders header, including desktop menu
@@ -39,8 +40,8 @@ const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) =
           </Link>
         </li>
         <li className={`relative group`}>
-          <Link to="/projects" className="relative inline-block">
-            Projects
+          <Link to="/portfolio" className="relative inline-block">
+            Portfolio
             <span
               className={`${isProjectsPage ? 'w-full' : 'w-0'} absolute left-0 -bottom-2 h-[1px] bg-white transition-all duration-300 ease-in-out group-hover:w-full`}
             ></span>
@@ -74,6 +75,12 @@ const Header = ({ toggleMobileMenu, isHomePage, isAboutPage, isProjectsPage }) =
           )}
         </li>
         </ul>
+        {!isHomePage && (
+          <div className="hidden ml-auto lg:flex gap-10 mr-8 md:mt-0">
+            <SocialIcons widthHeight={'28'}/>
+          </div>
+        )}
+
         <div className="md:hidden">
           <MenuBars fill={'white'} toggleMobileMenu={toggleMobileMenu} />
         </div>
