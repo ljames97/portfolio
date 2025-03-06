@@ -64,7 +64,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
         </button>
       </div>
       <ul className="md:text-base md:pt-0 p-12 mb-16 overflow-visible text-xl tracking-widest opacity-80 text-dark-teal text-white">
-        {["Home", "About", "Projects"].map((item, index) => (
+        {["Home", "About", "Portfolio"].map((item, index) => (
           <li
             key={item}
             className={`md:hover:text-accent mt-8 animate-slide-up`}
