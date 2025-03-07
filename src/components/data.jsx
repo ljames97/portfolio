@@ -49,12 +49,14 @@ const comingSoon = {
 const caseStudies = [
   {
     id: 'my-chai',
+    url: 'https://ljames97.github.io/my-chai',
+    gitHub: 'https://github.com/ljames97/my-chai',
     title: 'MyChai – Premium Loose Leaf Tea eCommerce Store',
     subtitle: 'Full-Stack eCommerce with Stripe Payments & Firebase',
-    caseStudyPhotos: [myChaiCover, myChai3, myChai2],
+    caseStudyPhotos: [myChaiCover, myChai3],
     uiPhotos: [myChai6, myChai4],
     codePhotos: [myChaiCode2],
-    overview: `MyChai is a full-stack eCommerce platform for premium loose-leaf tea and teaware. It features a responsive UI, a cart system with Firebase integration, Stripe payments, and a light/dark mode toggle for a personalized user experience. The backend, built with Node.js and Railway, manages payments and order processing securely.
+    overview: `MyChai is a full-stack eCommerce platform for premium loose-leaf tea and teaware. It features a responsive UI, a cart system with Firebase integration, Stripe payments, and a light/dark mode toggle for a personalised user experience. The backend, built with Node.js and Railway, manages payments and order processing securely.
     
     My target audience was tea enthusiasts looking for a curated shopping experience.
     This influenced design decisions, UI choices, and the color palette, ensuring an elegant and minimal aesthetic.`,
@@ -66,7 +68,7 @@ const caseStudies = [
       { feature: "Cart System", description: "Items persist via LocalStorage (for guests) or Firebase (for account users)." },
       { feature: "Customer Accounts", description: "Users can view order history, update account details, and upload profile photos." },
       { feature: "Stripe Checkout Integration", description: "Secure payment processing with test card support." },
-      { feature: "Dark/Light Mode Toggle", description: "Customizable user experience with persistent theme state." },
+      { feature: "Dark/Light Mode Toggle", description: "Customisable user experience with persistent theme state." },
     ],
     challenges: [
       {
@@ -94,13 +96,13 @@ const caseStudies = [
     futureImprovements: {
       shortTerm: [
         { title: "Shopify Migration", description: "Convert MyChai into a real Liquid-powered Shopify store." },
-        { title: "Wishlist Feature", description: "Allow users to save favorite products for later." },
+        { title: "Wishlist Feature", description: "Allow users to save favourite products for later." },
         { title: "Animations & UX Improvements", description: "Smooth scroll-based animations for a more engaging UI." },
         { title: "Comprehensive React Testing", description: "Jest & React Testing Library for better test coverage." },
       ],
       longTerm: [
         { title: "Multi-Step Checkout Process", description: "Instead of instant Stripe redirection." },
-        { title: "Internationalization Support", description: "Multi-language & currency options." },
+        { title: "Internationalisation Support", description: "Multi-language & currency options." },
       ],
     },
     finalThoughts: 'This project involved full-stack development, from frontend UI/UX to backend authentication & payments. Debugging deployment challenges with Railway, Stripe, and Firebase strengthened my problem-solving skills in a production-like environment.',
