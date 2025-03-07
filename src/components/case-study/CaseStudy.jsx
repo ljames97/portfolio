@@ -17,22 +17,22 @@ const CaseStudy = () => {
 
 
   return (
-    <div className="bg-dark-blue border border-black md:rounded-3xl max-w-5xl mx-auto p-8 py-20 md:p-20 md:my-20 text-gray-300">
+    <div className="font-thin bg-dark-blue border border-black md:rounded-3xl max-w-5xl mx-auto p-8 py-20 md:p-20 md:my-20 text-gray-300">
       
       {/* Links */}
-      <div className="hidden md:flex gap-4 justify-end mb-8 -mt-4">
+      <div className="font-normal hidden md:flex gap-4 justify-end mb-8 -mt-4">
         <button onClick={handleGithubClick} className="bg-gray-800 hover:bg-gray-700 text-white text-xs bg-transparent p-4 rounded-3xl">GitHub →</button>
         <button onClick={handleLiveClick} className="bg-gray-800 hover:bg-gray-700 text-white text-xs bg-transparent p-4 rounded-3xl">Live demo →</button>
       </div>
 
       {/* Title Section */}
       <header className="text-center mb-4">
-        <h1 className="text-4xl font-medium text-gray-200">{study.title}</h1>
-        <p className="text-lg mt-4">{study.subtitle}</p>
+        <h1 className="text-4xl font-light text-gray-200">{study.title}</h1>
+        <p className="font-normal text-lg mt-4">{study.subtitle}</p>
       </header>
 
       {/* Tech */}
-      <div className="flex flex-wrap gap-2 justify-center mb-20">
+      <div className="font-normal flex flex-wrap gap-2 justify-center mb-20">
         {study.tech.map((tech, index) => (
           <span key={index} className="bg-gray-700 px-4 py-2 text-sm text-white rounded-3xl">
             {tech}
@@ -152,7 +152,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Back Button */}
-      <div className="text-center mt-16">
+      <div className=" font-normal text-center mt-16">
         <a href="/portfolio" className="inline-block bg-gray-800 px-6 py-3 rounded-3xl text-white hover:bg-gray-700">
           ← Back to Portfolio
         </a>
