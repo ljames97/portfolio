@@ -1,5 +1,12 @@
 export { default as headshot } from './headshot.webp';
 export { default as myChaiCover } from './my-chai-cover.webp';
+export { default as myChai2 } from './my-chai-2.webp';
+export { default as myChai3 } from './my-chai-3.webp';
+export { default as myChai4 } from './my-chai-4.webp';
+export { default as myChai5 } from './my-chai-5.webp';
+export { default as myChai6 } from './my-chai-6.webp';
+export { default as myChaiCode} from './my-chai-code-1.webp';
+export { default as myChaiCode2} from './my-chai-code-2.webp';
 export { default as plantBudCover } from './plant-bud-cover.webp';
 export { default as moodBoardCover } from './mood-board.webp';
 export { default as lightDarkMode } from './light-dark-mode.svg';

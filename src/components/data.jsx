@@ -1,6 +1,6 @@
 // data.jsx
 
-import { moodBoardCover, myChaiCover, plantBudCover, portfolioCover } from "../assets";
+import { moodBoardCover, myChai2, myChai3, myChai4, myChai5, myChai6, myChaiCode, myChaiCode2, myChaiCover, plantBudCover, portfolioCover } from "../assets";
 
 const projects = [
   {
@@ -14,7 +14,7 @@ const projects = [
     url: 'https://ljames97.github.io/my-chai',
     gitHub: 'https://github.com/ljames97/my-chai',
     backgroundColor: 'bg-dark-brown',
-    caseStudy: false
+    caseStudy: true
   },
   {
     title: 'PlantBud.',
@@ -51,9 +51,10 @@ const caseStudies = [
     id: 'my-chai',
     title: 'MyChai – Premium Loose Leaf Tea eCommerce Store',
     subtitle: 'Full-Stack eCommerce with Stripe Payments & Firebase',
-    overview: `MyChai is a concept eCommerce store designed for premium loose-leaf teas and teaware. The goal was to build a fully functional, responsive eCommerce platform with core features like a cart system, product sorting, user accounts, and Stripe payments.
-
-    Additionally, I wanted to learn Node.js backend fundamentals and integrate a Railway-hosted API for secure payments.
+    caseStudyPhotos: [myChaiCover, myChai3, myChai2],
+    uiPhotos: [myChai6, myChai4],
+    codePhotos: [myChaiCode2],
+    overview: `MyChai is a full-stack eCommerce platform for premium loose-leaf tea and teaware. It features a responsive UI, a cart system with Firebase integration, Stripe payments, and a light/dark mode toggle for a personalized user experience. The backend, built with Node.js and Railway, manages payments and order processing securely.
     
     My target audience was tea enthusiasts looking for a curated shopping experience.
     This influenced design decisions, UI choices, and the color palette, ensuring an elegant and minimal aesthetic.`,
@@ -67,33 +68,26 @@ const caseStudies = [
       { feature: "Stripe Checkout Integration", description: "Secure payment processing with test card support." },
       { feature: "Dark/Light Mode Toggle", description: "Customizable user experience with persistent theme state." },
     ],
-    designChoices: {
-      colorPalette: "Earthy tones (browns, tans, greens) inspired by natural tea colors.",
-      typography: [
-        { type: "Serif", useCase: "Logo (luxurious, brand authority)" },
-        { type: "Sans-serif", useCase: "UI (modern, clean, and minimal)" },
-      ],
-    },
     challenges: [
       {
         title: "Stripe Payment Integration & Backend Hosting",
         problem:
-          "Stripe was straightforward on localhost, but when deploying, the integration broke due to CORS errors and missing image paths. Initially, I ran the backend locally (localhost:4000), but when moving to production, I had 502 errors on Railway, even though logs and variables seemed correct.",
+          "The initial Stripe integration broke in production due to CORS errors and missing image paths. Additionally, deploying the Node.js server with Railway resulted in 502 errors due to a misconfigured port.",
         solution: [
-          "Hosted `server.js` separately in a new GitHub repository.",
-          "Used Railway to deploy the backend, fixing the PORT mismatch (should be 8080, not 4000).",
-          "Solved CORS issues by allowing multiple frontend origins: `['https://ljames97.github.io', 'https://ljames97.github.io/my-chai']`.",
+          "Deployed server.js separately in a new GitHub repository.",
+          "Hosted the backend with Railway, correcting the PORT mismatch (8080 instead of 4000).",
+          "Solved CORS issues by allowing multiple frontend origins.",
           "Adjusted image paths so Stripe could fetch them correctly on the checkout page.",
         ],
       },
       {
         title: "Firebase Authentication & Cart Management",
         problem:
-          "Managing cart state across guest users and authenticated users was tricky. Firebase rules needed to be adjusted to allow secure cart modifications.",
+          "Managing cart state for both guest and authenticated users required a secure, scalable approach.",
         solution: [
-          "Used LocalStorage for guest users and Firebase for authenticated users.",
-          "Applied React Context API to avoid prop drilling and ensure cart state was globally accessible.",
-          "Implemented Firebase authentication rules for secure account creation, order tracking, and profile photo updates.",
+          "Implemented LocalStorage for guest users and Firebase for authenticated users",
+          "Used React Context API to manage global cart state efficiently.",
+          "Configured Firebase authentication rules for secure order tracking and profile updates.",
         ],
       },
     ],
@@ -109,7 +103,7 @@ const caseStudies = [
         { title: "Internationalization Support", description: "Multi-language & currency options." },
       ],
     },
-    finalThoughts: 'This project deepened my understanding of full-stack development, from frontend UI/UX to backend deployment and authentication. The most challenging part was debugging deployment issues with Railway, Stripe, and CORS, but those challenges reinforced problem-solving skills that are critical for real-world projects.',
+    finalThoughts: 'This project involved full-stack development, from frontend UI/UX to backend authentication & payments. Debugging deployment challenges with Railway, Stripe, and Firebase strengthened my problem-solving skills in a production-like environment.',
   }
 ]
 

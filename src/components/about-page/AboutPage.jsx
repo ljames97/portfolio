@@ -23,7 +23,7 @@ const AboutPage = () => {
         <p className="md:w-2/5 my-4 md:my-6 opacity-80">I have a strong foundation in vanilla JavaScript and CSS which I believe is key to truly understanding the core of web development. Whether it’s solving complex technical challenges or learning new technologies, I enjoy the creative problem-solving that comes with bringing projects to life on the web.</p>
         {/* <h1 className="w-2/5 mt-6 text-lg">Interests</h1> */}
         <p className="md:w-2/5 my-4 md:mt-6 opacity-80">Outside of web development, I enjoy creative pursuits and am a keen jazz pianist, artist, and writer. I find these creative disciplines keep me engaged, inspire my approach to development, and help bring a unique perspective to my work.</p>
-        <button onClick={handleClick} className="mt-8 p-4 hover:bg-hover-accent bg-accent text-black rounded-3xl">My Projects →</button>
+        <button onClick={handleClick} className="mt-8 p-4 hover:bg-hover-accent bg-accent text-black rounded-3xl">My Portfolio →</button>
       </div>
 
     </div>

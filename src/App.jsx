@@ -61,7 +61,7 @@ const MainContent = ({ toggleMobileMenu, footerRef, isMobileMenuVisible }) => {
   return (
     <>
       <Header toggleMobileMenu={toggleMobileMenu} isHomePage={isHomePage} isAboutPage={isAboutPage} isProjectsPage={isProjectsPage} />
-      <main className="flex-1">
+      <main className="flex-1 bg-off-white">
         {isHomePage && <HomePage isHomePage={isHomePage} footerRef={footerRef} toggleMobileMenu={toggleMobileMenu} isMobileMenuVisible={isMobileMenuVisible} />}
         {location.pathname === "/about" && <AboutPage />}
         {location.pathname === "/portfolio" && <ProjectsPage isHomePage={isHomePage} />}
