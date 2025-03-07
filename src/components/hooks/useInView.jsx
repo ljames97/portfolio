@@ -11,29 +11,19 @@ import { useEffect, useState } from "react";
  */
 export const useInView = (ref, options = {}) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [threshold, setThreshold] = useState(options.threshold || 0.3);
 
   useEffect(() => {
-    // Update the threshold dynamically based on screen size
-    const updateThreshold = () => {
-      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-      setThreshold(isDesktop ? 0.3 : 0.1);
+    const observerOptions = {
+      ...options,
+      threshold:  options.threshold || 0,
     };
 
-    updateThreshold(); // Set initial threshold
-    window.addEventListener("resize", updateThreshold); // Update on resize
-
-    return () => {
-      window.removeEventListener("resize", updateThreshold); // Clean up
-    };
-  }, []);
-
-  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
+        console.log(`Element is ${entry.isIntersecting ? "VISIBLE" : "NOT visible"}`);
       },
-      { ...options, threshold }
+      observerOptions
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -41,7 +31,7 @@ export const useInView = (ref, options = {}) => {
     return () => {
       if (ref.current) observer.unobserve(ref.current);
     };
-  }, [ref, options, threshold]);
+  }, [ref, options]);
 
   return isVisible;
 };

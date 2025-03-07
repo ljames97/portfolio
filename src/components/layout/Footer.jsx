@@ -34,7 +34,7 @@ const Footer = forwardRef(({ isHomePage }, ref) => {
         </div>
         <div className="flex flex-col mt-8 md:flex md:flex-row justify-between">
           <p>© Luke James 2025</p>
-          <div className="order-first flex gap-16 mt-12 mb-16 md:mt-0">
+          <div className="order-first flex gap-10 mt-12 mb-16 md:mt-0">
             <SocialIcons widthHeight={'25'} footer={footer}/>
           </div>
         </div>
