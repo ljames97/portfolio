@@ -1,6 +1,6 @@
 // data.jsx
 
-import { moodBoardCover, myChai2, myChai3, myChai4, myChai5, myChai6, myChaiCode, myChaiCode2, myChaiCover, plantBudCover, portfolioCover } from "../assets";
+import { lostLibraryCover, moodBoardCover, moodLabCover, moodLabCover2, myChai2, myChai3, myChai4, myChai5, myChai6, myChaiCode, myChaiCode2, myChaiCover, plantBudCover, portfolioCover } from "../assets";
 
 const projects = [
   {
@@ -9,12 +9,20 @@ const projects = [
     shortDescription: `MyChai is an ecommerce concept store for speciality loose leaf teas.`,
     description_1: 'MyChai is a concept eCommerce store for specialty loose-leaf teas, built to demonstrate proficiency in React and showcase design skills for eCommerce.',
     coverPhoto: [myChaiCover],
-    skills: 'React, node.js, SCSS, Railway, FireBase.',
+    skills: 'React, Node.js, SCSS, Railway, FireBase.',
     exploreLink: '/my-chai',
     url: 'https://ljames97.github.io/my-chai',
     gitHub: 'https://github.com/ljames97/my-chai',
     backgroundColor: 'bg-dark-brown',
     caseStudy: true
+  },
+  {
+    title: 'MoodLab.',
+    description_1: 'MoodLab is a modern visual moodboard app that allows users to create, customise, and export moodboards. Built using next.js, typscrips and tailwind css.',
+    skills: 'Next.js, Typescript, Tailwind CSS, Fabric.js, Firebase.',
+    coverPhoto: moodLabCover2,
+    url: 'https://mood-lab.vercel.app',
+    gitHub: 'https://github.com/ljames97/mood-lab',
   },
   {
     title: 'PlantBud.',
@@ -28,6 +36,13 @@ const projects = [
     backgroundColor: 'bg-dark-brown'
   },
   {
+    title: 'Lost Library.',
+    description_1: 'The Lost Library is an interactive digital library app where users can explore, collect, and uncover hidden books, secrets, and stories.',
+    skills: 'Next.js, Typescrips, Tailwind CSS',
+    coverPhoto: lostLibraryCover,
+    comingSoon: true
+  },
+  {
     title: 'Portfolio.',
     description_1: 'My web developer portfolio, showcasing projects, skills and bio, created using React and styled with Tailwind CSS.',
     skills: 'React, Tailwind CSS.',
@@ -37,14 +52,6 @@ const projects = [
     portfolio: true
   }
 ]
-
-const comingSoon = {
-    title: 'MoodLab.',
-    description_1: 'MoodLab is a collaborative mood board applicaiton that lets users create, customise, and share ideas in real time.',
-    skills: 'React, Tailwind CSS, FireBase, Next.js, Node.js.',
-    coverPhoto: moodBoardCover,
-    comingSoon: true
-  }
 
 const caseStudies = [
   {
@@ -109,4 +116,4 @@ const caseStudies = [
   }
 ]
 
-export { projects, comingSoon, caseStudies };
+export { projects, caseStudies };

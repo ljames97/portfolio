@@ -2,7 +2,6 @@
 
 import { useNavigate } from "react-router-dom";
 
-
 /**
  * Renders project with title, skills, description, cover photo and buttons.
  * Different buttons are rendered depending on type or project and whether or not this is on homepage.
@@ -28,7 +27,7 @@ const ProjectWidget = ({ project, isHomePage }) => {
   }
 
   return (
-    <div className={`shadow-xl transition-shadow ${project.comingSoon && isHomePage && 'hidden lg:block'} ${project.portfolio && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} ${isHomePage ? 'text-black' : 'text-white'} border h-1/1 lg:w-2/5 md:w-1/1 lg:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl flex flex-col`}>
+    <div className={`shadow-xl transition-shadow ${project.comingSoon && isHomePage && 'hidden'} ${project.portfolio && isHomePage && 'hidden'} ${isHomePage ? 'bg-transparent' : 'bg-dark-teal'} ${isHomePage ? 'text-black' : 'text-white'} border h-1/1 lg:w-2/5 md:w-1/1 lg:pb-8 pb-16 mb-16 border-black border-dark-blue border px-8 pt-10 rounded-3xl flex flex-col`}>
       <div className="flex flex-col gap-2 h-full">
         <h3 className="tracking-wide text-2xl font-thin">{project.title}</h3>
         <p className="italic opacity-90 text-sm">{project.skills}</p>
@@ -40,7 +39,7 @@ const ProjectWidget = ({ project, isHomePage }) => {
         <div className="w-1/1 mt-auto">
 
           {!project.comingSoon && isHomePage && (<button onClick={handleClick} className="mt-4 p-4 bg-accent hover:bg-hover-accent text-black rounded-3xl">Discover →</button>)}
-          {project.comingSoon && (<button className="mt-4 p-4 rounded-3xl bg-custom-purple hover:cursor-auto text-white text-sm italic mr-2">Coming soon...</button>)}
+          {project.comingSoon && (<button className="mt-4 p-4 rounded-3xl bg-gray-700 hover:cursor-auto text-white text-sm italic mr-2">Coming soon...</button>)}
           {!project.comingSoon && !isHomePage && (
         <div className="mt-8 flex gap-4 flex-wrap">
         {/* <button className="text-sm mr-8 bg-green-600 px-6 py-4 rounded">Live</button>

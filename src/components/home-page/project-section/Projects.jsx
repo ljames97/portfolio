@@ -1,7 +1,7 @@
 // Projects.jsx
 
 import { useEffect, useRef, useState } from "react";
-import { comingSoon, projects } from "../../data";
+import { projects } from "../../data";
 import ProjectWidget from "./ProjectWidget";
 import { useInView } from "../../hooks/useInView";
 
@@ -44,7 +44,6 @@ const Projects = ({ isHomePage }) => {
         {projects.map((project, index) => (
           <ProjectWidget project={project} key={index} isHomePage={isHomePage} />
         ))}
-        {<ProjectWidget project={comingSoon} isHomePage={isHomePage} />}
       </div>
     </div>
   );
