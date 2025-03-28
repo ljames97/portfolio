@@ -13,3 +13,6 @@ export { default as lightDarkMode } from './light-dark-mode.svg';
 export { default as portfolioCover } from './portfolio-cover.webp';
 export { default as code } from './code.webp';
 export { default as cv } from './luke-james-cv.pdf';
+export { default as moodLabCover} from './mood-lab-cover.webp';
+export { default as moodLabCover2} from './mood-lab-cover-2.webp';
+export { default as lostLibraryCover} from './lost-library-cover.webp';
